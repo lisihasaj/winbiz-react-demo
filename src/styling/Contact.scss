@@ -1,0 +1,637 @@
+// Presets
+
+$ctaColor: #0000df;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+$textOnPrimary: #6e6e6e;
+$footerText: #b1b2b5;
+$placeholderText: #707070;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+  font-family: "CamptonBold";
+}
+
+@mixin semiBoldFont {
+  font-family: "CamptonSemiBold";
+}
+
+@mixin mediumFont {
+  font-family: "CamptonMedium";
+}
+
+@mixin bookFont {
+  font-family: "CamptonBook";
+}
+
+//Button Mixins
+
+@mixin navButtonLayout {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+}
+
+@mixin buttonText {
+  text-transform: uppercase;
+  @include semiBoldFont;
+  font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+  transition: all 0.3s ease;
+}
+
+//Arrow Mixin
+
+@mixin arrowButton($color: #6e6e6e) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  height: auto !important;
+  background: transparent;
+}
+
+//Triangle Mixin
+
+@mixin triangle($top: 0, $left: 0) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: transparent;
+    border-style: solid;
+    border-color: $ctaColor;
+    border-width: 18px 15px;
+    border-color: $ctaColor transparent transparent $ctaColor;
+  }
+}
+
+//SubPage NavLink Mixin
+
+@mixin navLink($color: #000000) {
+  @include mediumFont;
+  position: relative;
+  width: auto;
+  height: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: $color;
+  margin: 0 2.5vw;
+  text-transform: uppercase;
+  text-align: start;
+  font-size: 18px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 4px;
+    width: 100px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+
+  &:focus,
+  &:hover {
+    color: white;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+//Input Mixins
+
+@mixin label($color: #000000) {
+  @include bookFont;
+  color: $color;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+@mixin inputData {
+  width: 100% !important;
+  height: 45px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 13px;
+  background-color: #eaeaea;
+
+  &::placeholder {
+    color: $placeholderText;
+    @include bookFont;
+    font-size: 14px;
+  }
+}
+
+//Styling
+
+.contact {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $primaryWhite;
+
+  .contactHeader {
+    position: relative;
+    height: 370px;
+    width: 100% !important;
+    padding: $pageMargin;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+    .headingsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5vh;
+      z-index: 110;
+
+      .title {
+        @include boldFont;
+        color: #000000;
+        text-transform: uppercase;
+      }
+
+      .subTitle {
+        @include mediumFont;
+        color: #000000;
+      }
+    }
+  }
+
+  .mainWrapper {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .etape {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 60px 0;
+
+      .title {
+        @include semiBoldFont;
+        color: $ctaColor;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        @include mediumFont;
+        color: $ctaColor;
+        font-size: 25px;
+      }
+
+      .cardsContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 30px 0 0 0;
+
+        .card {
+          height: 75px;
+          width: 32% !important;
+          background-color: #eaeaea;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 18px 32px;
+          border-radius: 20px;
+          border: solid 2px #eaeaea;
+          margin-bottom: 20px;
+          box-shadow: 1px 2px 7px rgba($color: #000000, $alpha: 0.3);
+          transition: all 0.2s ease;
+
+          .icon {
+            height: 40px;
+            width: 40px;
+            background-color: $ctaColor;
+          }
+
+          .cardTitle {
+            @include mediumFont;
+            font-size: 18px;
+            margin: 0;
+            color: $placeholderText;
+            text-transform: uppercase;
+            text-align: end;
+          }
+
+          &:hover {
+            box-shadow: 1px 2px 2px rgba($color: #000000, $alpha: 0.4);
+            background-color: darken(#eaeaea, 3%);
+          }
+
+          &:focus {
+            border: solid 2px $ctaColor;
+
+            .cardTitle {
+              color: $ctaColor;
+            }
+          }
+        }
+
+        .cardSelected {
+          height: 75px;
+          width: 32% !important;
+          background-color: #eaeaea;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 18px 32px;
+          border-radius: 20px;
+          border: solid 2px #eaeaea;
+          margin-bottom: 20px;
+          box-shadow: 1px 2px 7px rgba($color: #000000, $alpha: 0.3);
+          transition: all 0.2s ease;
+
+          .icon {
+            height: 40px;
+            width: 40px;
+            background-color: $ctaColor;
+          }
+
+          .cardTitle {
+            @include mediumFont;
+            font-size: 18px;
+            margin: 0;
+            color: $ctaColor;
+            text-transform: uppercase;
+            text-align: end;
+          }
+        }
+
+        .thirdCard {
+          height: 235px;
+          width: 32% !important;
+          background-color: #eaeaea;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 18px 32px;
+          border-radius: 20px;
+          border: solid 2px #eaeaea;
+          margin-bottom: 20px;
+          box-shadow: 1px 2px 7px rgba($color: #000000, $alpha: 0.3);
+          transition: all 0.2s ease;
+
+          .upperItems {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 35px;
+
+            .icon {
+              height: 40px;
+              width: 40px;
+              background-color: $ctaColor;
+            }
+
+            .cardTitle {
+              @include mediumFont;
+              font-size: 18px;
+              margin: 0;
+              color: $placeholderText;
+              text-transform: uppercase;
+              text-align: end;
+            }
+          }
+
+          .description {
+            @include mediumFont;
+            font-size: 16px;
+            color: $placeholderText;
+            text-align: center;
+          }
+
+          .thumbnail {
+            position: relative;
+            @include mediumFont;
+            font-size: 16px;
+            color: $ctaColor;
+            text-align: center;
+            overflow: hidden;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: $ctaColor;
+              height: 1px;
+              width: 0;
+              transition: all 0.2s ease;
+            }
+          }
+
+          &:hover {
+            box-shadow: 1px 2px 2px rgba($color: #000000, $alpha: 0.4);
+            background-color: darken(#eaeaea, 3%);
+
+            .thumbnail {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+
+          &:focus {
+            border: solid 2px $ctaColor;
+
+            .cardTitle {
+              color: $ctaColor;
+            }
+
+            .thumbnail {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .thirdSelected {
+          height: 235px;
+          width: 32% !important;
+          background-color: #eaeaea;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 18px 32px;
+          border-radius: 20px;
+          border: solid 2px $ctaColor;
+          margin-bottom: 20px;
+          box-shadow: 1px 2px 7px rgba($color: #000000, $alpha: 0.3);
+          transition: all 0.2s ease;
+
+          .upperItems {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 35px;
+
+            .icon {
+              height: 40px;
+              width: 40px;
+              background-color: $ctaColor;
+            }
+
+            .cardTitle {
+              @include mediumFont;
+              font-size: 18px;
+              margin: 0;
+              color: $ctaColor;
+              text-transform: uppercase;
+              text-align: end;
+            }
+          }
+
+          .description {
+            @include mediumFont;
+            font-size: 16px;
+            color: $placeholderText;
+            text-align: center;
+          }
+
+          .thumbnail {
+            position: relative;
+            @include mediumFont;
+            font-size: 16px;
+            color: $ctaColor;
+            text-align: center;
+            overflow: hidden;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: $ctaColor;
+              height: 1px;
+              width: 100%;
+              transition: all 0.2s ease;
+            }
+          }
+        }
+      }
+    }
+
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      .radioInputs {
+        @include label;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+
+        .label {
+          @include label;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-left: 50px;
+
+          .radio {
+            position: relative;
+            margin-right: 10px;
+            height: 1.5rem;
+            width: 1.5rem;
+            background-color: $ctaColor;
+          }
+        }
+      }
+
+      .personalDataInput {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        .PDInput {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          max-width: 49% !important;
+
+          .label {
+            @include label();
+          }
+
+          .theInput {
+            @include inputData;
+          }
+
+          .error {
+            @include bookFont;
+            font-size: 14px;
+            color: red;
+            margin-left: 15px;
+          }
+        }
+      }
+
+      .wideDataInput {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        .emailInput {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-bottom: 20px;
+          max-width: 100% !important;
+
+          .label {
+            @include label();
+          }
+
+          .theInput {
+            @include inputData;
+          }
+        }
+
+        .messageInput {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-bottom: 20px;
+          max-width: 100% !important;
+
+          .label {
+            @include label();
+          }
+
+          .theInput {
+            @include inputData;
+            height: 150px;
+            padding-top: 10px;
+          }
+        }
+      }
+
+      .btnWrapper {
+        display: flex;
+        justify-content: flex-end;
+
+        .submit {
+          @include callToAction;
+          @include buttonText;
+        }
+      }
+    }
+  }
+
+  .feedbackSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .messageBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #eaeaea;
+      box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+      padding: 50px 30px;
+      margin-bottom: 80px;
+      border-radius: 20px;
+
+      .messageTitle {
+        @include boldFont;
+        font-size: 25px;
+        color: $ctaColor;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .messageSubTitle {
+        @include mediumFont;
+        color: #000000;
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        width: 70%;
+      }
+
+      .backToHome {
+        @include mediumFont;
+        color: $ctaColor;
+        text-align: center;
+      }
+    }
+  }
+}

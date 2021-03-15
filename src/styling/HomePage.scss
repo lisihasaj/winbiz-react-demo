@@ -1,0 +1,973 @@
+// Presets
+
+$ctaColor: #0000df;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+$textOnPrimary: #6e6e6e;
+$footerText: #b1b2b5;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+  font-family: "CamptonBold";
+}
+
+@mixin semiBoldFont {
+  font-family: "CamptonSemiBold";
+}
+
+@mixin mediumFont {
+  font-family: "CamptonMedium";
+}
+
+@mixin bookFont {
+  font-family: "CamptonBook";
+}
+
+//Button Mixins
+
+@mixin navButtonLayout {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+}
+
+@mixin buttonText {
+  text-transform: uppercase;
+  @include semiBoldFont;
+  font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+  transition: all 0.3s ease;
+}
+
+//Arrow Mixin
+
+@mixin arrowButton($color: #6e6e6e) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  height: auto !important;
+  background: transparent;
+}
+
+//Triangle Mixin
+
+@mixin triangle($top: 0, $left: 0) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: transparent;
+    border-style: solid;
+    border-color: $ctaColor;
+    border-width: 18px 15px;
+    border-color: $ctaColor transparent transparent $ctaColor;
+  }
+}
+
+//Styling
+
+.home {
+  position: relative;
+  width: 100%;
+
+  .header {
+    position: relative;
+    width: 100%;
+    padding: $pageMargin;
+    height: 1081px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-image: url(../assets/homepage.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+
+    .gradientLayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 783px;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+    }
+
+    .contentWrapper {
+      height: 65%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .sliderBox {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-bottom: 25px;
+
+          .overflowWrapper {
+            max-width: 700px !important;
+            max-height: 280px !important;
+            overflow: hidden;
+
+            .content {
+              margin-bottom: 20px;
+
+              .title {
+                text-transform: uppercase;
+                text-align: start;
+                @include boldFont;
+                color: #ffffff;
+                font-size: 74px;
+                margin: 0 !important;
+              }
+            }
+          }
+
+          .pagination {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            height: auto !important;
+
+            .arrowLeft {
+              @include arrowButton(white);
+              margin-right: 5px;
+            }
+
+            .pages {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              .page {
+                width: 40px;
+                height: 3px;
+                background-color: $textOnPrimary;
+                z-index: 100;
+              }
+
+              .pageActive {
+                height: 5px;
+                background-color: white;
+              }
+            }
+
+            .arrowRight {
+              @include arrowButton(white);
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .shortDescription {
+          text-align: start;
+          @include bookFont;
+          color: #ffffff;
+          margin-bottom: 28px;
+        }
+
+        .wrapper {
+          .homeCTA {
+            @include buttonText;
+            @include callToAction;
+          }
+        }
+      }
+
+      .rightContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        .name {
+          margin-top: 20vh;
+          text-transform: uppercase;
+          color: white;
+          @include mediumFont;
+
+          #line {
+            background-color: white;
+          }
+        }
+
+        .thumbnail {
+          width: 120px;
+          height: 120px;
+          margin-top: 20vh;
+        }
+      }
+    }
+
+    .scrollContainer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      min-height: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .scroll {
+        @include bookFont;
+        color: white;
+        font-size: 16px;
+      }
+
+      .arrow {
+        @include arrowButton(white);
+      }
+    }
+  }
+
+  .statistics {
+    position: relative;
+    overflow: hidden;
+    background-color: $primaryWhite;
+    padding: 110px 5vw 70px 5vw;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .statsWrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-bottom: 80px;
+
+      .stat {
+        display: flex;
+        margin: 0 3vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .image {
+          width: 150px;
+          height: 150px;
+          margin-bottom: 25px;
+        }
+
+        .description {
+          width: 16vw;
+          text-align: center;
+          height: auto;
+          @include mediumFont;
+        }
+      }
+    }
+
+    .buttonWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .statsCTA {
+        @include buttonText;
+        @include callToAction;
+      }
+    }
+  }
+
+  .offersSection {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    padding: 90px 5vw;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      height: auto;
+
+      .titleBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .title {
+          font-size: 48px;
+          @include boldFont;
+          color: white;
+          text-align: start;
+          margin-bottom: 15px;
+        }
+
+        .description {
+          font-size: 14px;
+          @include bookFont;
+          color: white;
+          text-align: start;
+          margin-bottom: 25px;
+        }
+
+        .offersCTA {
+          @include buttonText;
+          @include callToAction;
+        }
+      }
+
+      .offersWrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .plus {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .icon {
+            color: $ctaColor;
+            font-size: 50px;
+          }
+        }
+
+        .layoutWrapper {
+          min-width: 530px;
+          background-color: #131313;
+          padding: 40px 70px;
+          border-radius: 15px;
+
+          #line {
+            background-color: $textOnPrimary;
+            margin: 20px 0;
+          }
+
+          .title {
+            color: white;
+            @include boldFont;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          .options {
+            .option {
+              color: white;
+              @include bookFont;
+              margin: 10px 0;
+
+              .icon {
+                margin-right: 5px;
+              }
+            }
+          }
+
+          .number {
+            text-align: center;
+            @include boldFont;
+            color: $ctaColor;
+            font-size: 114px;
+          }
+
+          .text {
+            text-align: center;
+            @include bookFont;
+            color: white;
+            font-size: 14px;
+            margin: 0;
+          }
+
+          .descr {
+            color: white;
+            @include bookFont;
+            cursor: pointer;
+
+            .icon {
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .additionalsWrapper {
+          max-width: 390px;
+          background-color: #131313;
+          padding: 30px 50px;
+          border-radius: 15px;
+
+          #line {
+            background-color: $textOnPrimary;
+            margin: 20px 0;
+          }
+
+          .title {
+            color: white;
+            @include boldFont;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          .options {
+            .option {
+              color: white;
+              @include bookFont;
+              margin: 10px 0;
+
+              .icon {
+                margin-right: 5px;
+              }
+            }
+          }
+
+          .descr {
+            color: white;
+            @include bookFont;
+            cursor: pointer;
+
+            .icon {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .whiteSection {
+    position: relative;
+    overflow: hidden;
+    background-color: $primaryWhite;
+    padding: 90px 5vw;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      @include boldFont;
+      color: #000000;
+      margin-bottom: 60px;
+    }
+
+    .image {
+      width: 700px;
+      height: auto;
+      margin-bottom: 60px;
+    }
+
+    .callToAction {
+      @include buttonText;
+      @include callToAction;
+    }
+  }
+
+  .appSection {
+    position: relative;
+    width: 100%;
+    padding: $pageMargin;
+    height: 1081px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-image: url(../assets/appDownload.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+
+    .fullScreenGradience {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1081px;
+      background: linear-gradient(
+        -60deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+    }
+
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 60%;
+      width: 100%;
+
+      .title {
+        position: relative;
+        @include boldFont;
+        color: white;
+        text-transform: uppercase;
+        font-size: 56px;
+        margin-bottom: 50px;
+        @include triangle(-110px, 0);
+      }
+
+      .imageWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .image {
+          width: 145px;
+          height: auto;
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+
+  .advantages {
+    position: relative;
+    width: 100%;
+    padding: 80px 5vw 95px 5vw;
+    background-color: #c3bdb6;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .title {
+      @include boldFont;
+      font-size: 40px;
+      color: #000000;
+      margin-bottom: 85px;
+      text-align: center;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 70px;
+      padding: 0;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 50px;
+
+        .image {
+          width: 150px;
+          height: auto;
+          margin-bottom: 40px;
+        }
+
+        .boxTitle {
+          @include boldFont;
+          color: #000000;
+          text-align: center;
+          text-transform: uppercase;
+          margin-bottom: 25px;
+        }
+
+        .description {
+          @include bookFont;
+          color: #6c6c6c;
+          text-align: center;
+          margin: 0;
+        }
+      }
+    }
+
+    .sectionCTA {
+      @include buttonText;
+      @include callToAction;
+    }
+  }
+
+  .product {
+    padding: 90px 0 105px 5vw;
+    background-color: $primaryWhite;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    .topWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 65px;
+      padding: 0 5vw 0 0;
+
+      .titleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .title {
+          @include boldFont;
+          color: #000000;
+          text-align: start;
+          font-size: 57px;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-bottom: 20px;
+
+          .plus {
+            @include boldFont;
+            font-size: 47px;
+            color: $ctaColor;
+            margin: 10px 0 0 20px;
+            display: flex;
+            justify-content: center;
+          }
+        }
+
+        .subTitle {
+          @include mediumFont;
+          color: #000000;
+          text-align: start;
+        }
+      }
+
+      .buttonContainer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        align-items: flex-start;
+
+        .sectionCTA {
+          @include callToAction;
+          @include semiBoldFont;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .sliderContainer {
+      margin-bottom: 55px;
+      width: 100%;
+
+      .cardWrapper {
+        min-width: 500px;
+        padding-left: 5px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        outline: none !important;
+        @include hoverTransition;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+
+        .imageWrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .image {
+            width: 120px;
+            height: 120px;
+            background-color: $ctaColor;
+            border-radius: 18px;
+            margin-right: 20px;
+            box-shadow: 3px 3px 8px rgba($color: #000000, $alpha: 0.16);
+          }
+        }
+
+        .elementsWrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+
+          .title {
+            @include mediumFont;
+            font-size: 25px;
+            margin: 0;
+          }
+
+          .thumbnail {
+            @include bookFont;
+            font-size: 12px;
+            margin-bottom: 8px;
+            color: $hoverButton;
+          }
+
+          .price {
+            @include mediumFont;
+            color: $ctaColor;
+            margin-bottom: 20px;
+          }
+
+          .buttonsContainer {
+            display: inline-block !important;
+
+            .moreInfo {
+              @include bookFont;
+              font-size: 12px;
+              color: rgb(59, 59, 59);
+              background-color: rgb(216, 216, 216);
+              padding: 3px 10px;
+              border: none;
+              border-radius: 5px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: auto;
+      padding: 0 5vw 0 0;
+
+      .arrowLeft {
+        @include arrowButton($ctaColor);
+        margin-right: 5px;
+      }
+
+      .pages {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .page {
+          width: 25px;
+          height: 3px;
+          background-color: #5f5fee;
+          z-index: 100;
+        }
+
+        .pageActive {
+          height: 5px;
+          background-color: $ctaColor;
+        }
+      }
+
+      .arrowRight {
+        @include arrowButton($ctaColor);
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .partners {
+    position: relative;
+    width: 100%;
+    padding: 100px 5vw 80px 5vw;
+    background-color: #000000;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .title {
+      @include boldFont;
+      color: white;
+      font-size: 40px;
+      margin-bottom: 85px;
+    }
+
+    .allLogos {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .partner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+
+        .image {
+          width: 130px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    position: relative;
+    width: 100%;
+    padding: 100px 5vw;
+    height: 540px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-image: url(../assets/pascal.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+
+    .halfScreenGradience {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 450px;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+    }
+
+    .contentWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .sliderContainer {
+        @include triangle(-60px, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .leftWrapper {
+          margin-bottom: 30px;
+          max-height: 150px;
+          width: auto;
+          overflow: hidden;
+
+          .slider {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .content {
+              @include boldFont;
+              text-transform: uppercase;
+              line-height: 50px;
+              color: white;
+              font-size: 52px;
+              margin-bottom: 15px;
+              max-width: 230px;
+            }
+
+            .title {
+              @include bookFont;
+              color: white;
+              max-width: 150px;
+            }
+          }
+        }
+
+        .pagination {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          height: auto !important;
+
+          .arrowLeft {
+            @include arrowButton(white);
+            margin-right: 5px;
+          }
+
+          .pages {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .page {
+              width: 40px;
+              height: 3px;
+              background-color: $textOnPrimary;
+              z-index: 100;
+            }
+
+            .pageActive {
+              height: 5px;
+              background-color: white;
+            }
+          }
+
+          .arrowRight {
+            @include arrowButton(white);
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .rightWrapper {
+        margin-left: 120px;
+        width: auto;
+        max-height: 90px;
+
+        .slider {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          .statement {
+            @include bookFont;
+            color: white;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}

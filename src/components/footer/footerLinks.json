@@ -1,0 +1,52 @@
+{
+    "groups": [
+        {
+            "id": 1,
+            "title": "Produits",
+            "url": "/product",
+            "item": [
+                "Produit Winbiz",
+                "Fonctionnalités",
+                "Appstore",
+                "Options Winbiz",
+                "Veoprint"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Supports",
+            "url": "/support",
+            "item": [
+                "FAQ",
+                "Télé-assistance",
+                "Historique des versions",
+                "Téléchargements",
+                "ISL Download"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Communauté",
+            "url": "/community",
+            "item": [
+                "Entrepreneurs",
+                "Fiduciaires",
+                "Winbiz Specialist",
+                "Podcasts",
+                "Vidéos"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Winbiz",
+            "url": "/product",
+            "item": [
+                "Histoire",
+                "Equipe",
+                "Partenaires",
+                "Showroom",
+                "Contact"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,959 @@
+// Presets
+
+$ctaColor: #0000df;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+$textOnPrimary: #6e6e6e;
+$footerText: #b1b2b5;
+$placeholderText: #707070;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+  font-family: "CamptonBold";
+}
+
+@mixin semiBoldFont {
+  font-family: "CamptonSemiBold";
+}
+
+@mixin mediumFont {
+  font-family: "CamptonMedium";
+}
+
+@mixin bookFont {
+  font-family: "CamptonBook";
+}
+
+//Button Mixins
+
+@mixin navButtonLayout {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+}
+
+@mixin buttonText {
+  text-transform: uppercase;
+  @include semiBoldFont;
+  font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+  transition: all 0.3s ease;
+}
+
+//Arrow Mixin
+
+@mixin arrowButton($color: #6e6e6e) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  height: auto !important;
+  background: transparent;
+}
+
+//Triangle Mixin
+
+@mixin triangle($top: 0, $left: 0) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: transparent;
+    border-style: solid;
+    border-color: $ctaColor;
+    border-width: 18px 15px;
+    border-color: $ctaColor transparent transparent $ctaColor;
+  }
+}
+
+//SubPage NavLink Mixin
+
+@mixin navLink($color: #000000) {
+  @include mediumFont;
+  position: relative;
+  width: auto;
+  height: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: $color;
+  margin: 0 2.5vw;
+  text-transform: uppercase;
+  text-align: start;
+  font-size: 18px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 4px;
+    width: 100px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+
+  &:focus,
+  &:hover {
+    color: white;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+//Input Mixins
+
+@mixin label($color: #000000) {
+  @include bookFont;
+  color: $color;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+@mixin inputData {
+  width: 100% !important;
+  height: 45px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 13px;
+  background-color: #eaeaea;
+
+  &::placeholder {
+    color: $placeholderText;
+    @include bookFont;
+    font-size: 14px;
+  }
+}
+
+//Styling
+
+@media (max-width: 1400px) {
+
+    .contact {
+
+        .mainWrapper {
+
+            .etape {
+
+                .cardsContainer {
+
+                    .card {
+
+                        .icon {
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        .cardTitle {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .cardSelected {
+
+                        .icon {
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        .cardTitle {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .thirdCard {
+
+                        .upperItems {
+
+                            .icon {
+
+                            }
+
+                            .cardTitle {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .description {
+                            font-size: 16px;
+                        }
+
+                        .thumbnail {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .thirdSelected {
+
+                        .upperItems {
+
+                            .icon {
+
+                            }
+
+                            .cardTitle {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .description {
+                            font-size: 16px;
+                        }
+
+                        .thumbnail {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .contactForm {
+
+                .radioInputs {
+                    @include label;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    margin-bottom: 30px;
+
+                    .label {
+                        @include label;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-left: 50px;
+
+                        .radio {
+                            position: relative;
+                            margin-right: 10px;
+                            height: 1.5rem;
+                            width: 1.5rem;
+                            background-color: $ctaColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .contact {
+
+        .contactHeader {
+
+            .headingsContainer {
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
+
+                .subTitle {
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .mainWrapper {
+            margin-bottom: 70px;
+            padding: $pageMargin;
+
+            .etape {
+                margin: 30px 0;
+
+                .title {
+
+                }
+
+                .subtitle {
+                    font-size: 20px;
+                }
+
+                .cardsContainer {
+
+                    .card {
+                        width: 48% !important;
+                        padding: 10px 20px;
+                        height: 68px;
+
+                        .icon {
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        .cardTitle {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .cardSelected {
+                        width: 48% !important;
+                        padding: 10px 20px;
+                        height: 68px;
+
+                        .icon {
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        .cardTitle {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .thirdCard {
+                        width: 100% !important;
+                        padding: 25px 25px;
+
+                        .upperItems {
+
+                            .icon {
+
+                            }
+
+                            .cardTitle {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .description {
+                            font-size: 20px;
+                        }
+
+                        .thumbnail {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .thirdSelected {
+                        width: 100%;
+                        padding: 25px 25px !important;
+
+                        .upperItems {
+
+                            .icon {
+
+                            }
+
+                            .cardTitle {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .description {
+                            font-size: 20px;
+                        }
+
+                        .thumbnail {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .contactForm {
+
+                .radioInputs {
+                    @include label;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    margin-bottom: 30px;
+
+                    .label {
+                        @include label;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-left: 50px;
+
+                        .radio {
+                            position: relative;
+                            margin-right: 10px;
+                            height: 1.5rem;
+                            width: 1.5rem;
+                            background-color: $ctaColor;
+                        }
+                    }
+                }
+            }
+
+            .feedbackSection {
+
+                .messageBox {
+                    margin-bottom: 10px;
+                    padding: 30px 30px;
+
+                    .messageTitle {
+                        font-size: 22px;
+                    }
+
+                    .messageSubTitle {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 769px) {
+    .contact {
+
+        .contactHeader {
+
+            .headingsContainer {
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
+
+                .subTitle {
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .mainWrapper {
+            margin-bottom: 70px;
+            padding: $pageMargin;
+
+            .etape {
+                margin: 30px 0;
+
+                .title {
+
+                }
+
+                .subtitle {
+                    font-size: 20px;
+                }
+
+                .cardsContainer {
+
+                    .card {
+                        width: 48% !important;
+                        padding: 10px 20px;
+                        height: 68px;
+
+                        .icon {
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        .cardTitle {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .cardSelected {
+                        width: 48% !important;
+                        padding: 10px 20px;
+                        height: 68px;
+
+                        .icon {
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        .cardTitle {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .thirdCard {
+                        width: 100% !important;
+                        padding: 25px 25px;
+
+                        .upperItems {
+
+                            .icon {
+
+                            }
+
+                            .cardTitle {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .description {
+                            font-size: 20px;
+                        }
+
+                        .thumbnail {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .thirdSelected {
+                        width: 100%;
+                        padding: 25px 25px !important;
+
+                        .upperItems {
+
+                            .icon {
+
+                            }
+
+                            .cardTitle {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .description {
+                            font-size: 20px;
+                        }
+
+                        .thumbnail {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .contactForm {
+
+                .radioInputs {
+                    @include label;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    margin-bottom: 30px;
+
+                    .label {
+                        @include label;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-left: 50px;
+
+                        .radio {
+                            position: relative;
+                            margin-right: 10px;
+                            height: 1.5rem;
+                            width: 1.5rem;
+                            background-color: $ctaColor;
+                        }
+                    }
+                }
+            }
+
+            .feedbackSection {
+
+                .messageBox {
+                    margin-bottom: 10px;
+                    padding: 30px 30px;
+
+                    .messageTitle {
+                        font-size: 22px;
+                    }
+
+                    .messageSubTitle {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 541px) {
+    .contact {
+
+        .contactHeader {
+
+            .headingsContainer {
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
+
+                .subTitle {
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .mainWrapper {
+            margin-bottom: 70px;
+            padding: $pageMargin;
+
+            .etape {
+                margin: 30px 0;
+
+                .title {
+
+                }
+
+                .subtitle {
+                    font-size: 20px;
+                }
+
+                .cardsContainer {
+
+                    .card {
+                        width: 48% !important;
+                        padding: 10px 12px;
+                        height: 68px;
+
+                        .icon {
+                            height: 30px;
+                            width: 30px;
+                        }
+
+                        .cardTitle {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .cardSelected {
+                        width: 48% !important;
+                        padding: 10px 12px;
+                        height: 68px;
+
+                        .icon {
+                            height: 30px;
+                            width: 30px;
+                        }
+
+                        .cardTitle {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .thirdCard {
+                        width: 100% !important;
+                        padding: 25px 25px;
+                    }
+
+                    .thirdSelected {
+                        width: 100%;
+                        padding: 25px 25px !important;
+                    }
+                }
+            }
+
+            .contactForm {
+
+                .radioInputs {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .label {
+                        margin: 5px 0;
+
+                        .radio {
+
+                        }
+                    }
+                }
+            }
+
+            .feedbackSection {
+
+                .messageBox {
+                    margin-bottom: 10px;
+                    padding: 30px 30px;
+
+                    .messageTitle {
+                        font-size: 22px;
+                    }
+
+                    .messageSubTitle {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 416px) {
+    .contact {
+
+        .contactHeader {
+
+            .headingsContainer {
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
+
+                .subTitle {
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .mainWrapper {
+            margin-bottom: 70px;
+            padding: $pageMargin;
+
+            .etape {
+                margin: 30px 0;
+
+                .title {
+
+                }
+
+                .subtitle {
+                    font-size: 20px;
+                }
+
+                .cardsContainer {
+
+                    .card {
+                        width: 48% !important;
+                        padding: 10px 12px;
+                        height: 68px;
+
+                        .icon {
+                            height: 30px;
+                            width: 30px;
+                        }
+
+                        .cardTitle {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .cardSelected {
+                        width: 48% !important;
+                        padding: 10px 12px;
+                        height: 68px;
+
+                        .icon {
+                            height: 30px;
+                            width: 30px;
+                        }
+
+                        .cardTitle {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .thirdCard {
+                        width: 100% !important;
+                        padding: 25px 25px;
+                    }
+
+                    .thirdSelected {
+                        width: 100%;
+                        padding: 25px 25px !important;
+                    }
+                }
+            }
+
+            .contactForm {
+
+                .radioInputs {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .label {
+                        margin: 5px 0;
+
+                        .radio {
+
+                        }
+                    }
+                }
+            }
+
+            .feedbackSection {
+
+                .messageBox {
+                    margin-bottom: 10px;
+                    padding: 30px 30px;
+
+                    .messageTitle {
+                        font-size: 22px;
+                    }
+
+                    .messageSubTitle {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 376px) {
+    .contact {
+
+        .contactHeader {
+
+            .headingsContainer {
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
+
+                .subTitle {
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .mainWrapper {
+            margin-bottom: 70px;
+            padding: $pageMargin;
+
+            .etape {
+                margin: 30px 0;
+
+                .title {
+
+                }
+
+                .subtitle {
+                    font-size: 20px;
+                }
+
+                .cardsContainer {
+
+                    .card {
+                        width: 48% !important;
+                        padding: 10px 12px;
+                        height: 68px;
+
+                        .icon {
+                            height: 30px;
+                            width: 30px;
+                        }
+
+                        .cardTitle {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .cardSelected {
+                        width: 48% !important;
+                        padding: 10px 12px;
+                        height: 68px;
+
+                        .icon {
+                            height: 30px;
+                            width: 30px;
+                        }
+
+                        .cardTitle {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .thirdCard {
+                        width: 100% !important;
+                        padding: 25px 25px;
+                    }
+
+                    .thirdSelected {
+                        width: 100%;
+                        padding: 25px 25px !important;
+                    }
+                }
+            }
+
+            .contactForm {
+
+                .radioInputs {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .label {
+                        margin: 5px 0;
+
+                        .radio {
+
+                        }
+                    }
+                }
+            }
+
+            .feedbackSection {
+
+                .messageBox {
+                    margin-bottom: 10px;
+                    padding: 30px 30px;
+
+                    .messageTitle {
+                        font-size: 22px;
+                    }
+
+                    .messageSubTitle {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

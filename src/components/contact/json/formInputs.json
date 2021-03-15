@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "pdi": [
+            {
+                "id": "firstName",
+                "label": "Prénom *",
+                "htmlFor": "Prénom *",
+                "ref": "register",
+                "placeholder": "prénom",
+                "type": "text",
+                "name": "firstName",
+                "error": "Le prénom doit être complété"
+            },
+            {
+                "id": "lastName",
+                "label": "Nom *",
+                "htmlFor": "Nom *",
+                "ref": "register",
+                "placeholder": "nom",
+                "type": "text",
+                "name": "lastName",
+                "error": "Le nom doit être rempli"
+            }
+        ]
+    },
+    {
+        "id": "email",
+        "label": "Adresse mail *",
+        "htmlFor": "Adresse mail *",
+        "ref": "register",
+        "placeholder": "votre adresse mail",
+        "type": "email",
+        "name": "email",
+        "error": "L'email doit être rempli"
+    },
+    {
+        "id": "message",
+        "label": "Message *",
+        "htmlFor": "Message *",
+        "ref": "register",
+        "placeholder": "écrivez ici votre demande",
+        "type": "text",
+        "name": "message",
+        "error": "Le message doit être complété"
+    }
+]

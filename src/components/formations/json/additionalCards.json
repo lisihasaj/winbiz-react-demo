@@ -1,0 +1,55 @@
+{
+    "firstPage":[
+        {
+            "url": "",
+            "image": "/winbiz/assets/traininge8.webp",
+            "title": "fiduciaires",
+            "subtitle": "Formations Fiduciaires",
+            "more": ">  voir le contenu de la formation"
+        },
+        {
+            "url": "",
+            "image": "/winbiz/assets/trainingw1.webp",
+            "title": "cours winbiz specialist",
+            "subtitle": "Winbiz Specialist",
+            "more": ">  voir le contenu de la formation"
+        },
+        {
+            "url": "",
+            "image": "/winbiz/assets/trainingw2.webp",
+            "title": "certification winbiz specialist",
+            "subtitle": "Winbiz Specialist",
+            "more": ">  voir le contenu de la formation"
+        }
+    ],
+    "formPage":[
+        {
+            "url": "",
+            "image": "/winbiz/assets/traininge2.webp",
+            "title": "ventes",
+            "subtitle": "Formations Entrepreneurs",
+            "more": ">  voir le contenu de la formation"
+        },
+        {
+            "url": "",
+            "image": "/winbiz/assets/traininge6.webp",
+            "title": "salaires",
+            "subtitle": "Formations Entrepreneurs",
+            "more": ">  voir le contenu de la formation"
+        },
+        {
+            "url": "",
+            "image": "/winbiz/assets/traininge4.webp",
+            "title": "stock",
+            "subtitle": "Formations Entrepreneurs",
+            "more": ">  voir le contenu de la formation"
+        },
+        {
+            "url": "",
+            "image": "/winbiz/assets/traininge3.webp",
+            "title": "achats",
+            "subtitle": "Formations Entrepreneurs",
+            "more": ">  voir le contenu de la formation"
+        }
+    ]
+}

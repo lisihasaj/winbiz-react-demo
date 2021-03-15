@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "Pascal Grieder",
+        "title": "Directeur général de Salt Suisse.",
+        "statement": "'J’ai choisi Winbiz pour sa simplicité d’utilisation et sa fiabilité. Je ne peux que recommander ce produit.'"
+    },
+    {
+        "id": 1,
+        "name": "Abella Biset",
+        "title": "Fondateur de Buzz Media.",
+        "statement": "'J'utilise régulièrement les services WinBiz depuis un certain temps maintenant et leur qualité de travail est vraiment bonne.'"
+    },
+    {
+        "id": 2,
+        "name": "Deon Capelle",
+        "title": "PDG de Michelin et artiste",
+        "statement": "'Coopération et flexibilité extrêmes dans le traitement de toutes les demandes qui incluent le travail créatif et la technologie.'"
+    }
+]

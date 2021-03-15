@@ -1,0 +1,22 @@
+{
+    "statistics": [
+        {
+            "id": 1,
+            "name": "50K",
+            "url": "/winbiz/assets/fiftyK.png",
+            "description": "+ de 50’000 sociétés suisses"
+        },
+        {
+            "id": 2,
+            "name": "FULL",
+            "url": "/winbiz/assets/full.png",
+            "description": "un outils de gestion complet"
+        },
+        {
+            "id": 3,
+            "name": "DÈS 69.-",
+            "url": "/winbiz/assets/des.png",
+            "description": "Logiciel de gestion le moins cher"
+        }
+    ]
+}

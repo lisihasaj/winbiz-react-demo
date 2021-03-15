@@ -1,0 +1,37 @@
+{
+    "offersection": [
+        {
+            "id": 1,
+            "title": "Une offre complète",
+            "number": "69.-",
+            "text": "HT/PAR MOIS ET PAR ACCÈS",
+            "offers": [
+                "Certifié Swiss Made et Swissdec",
+                "E-banking et e-factures intégrés",
+                "Visualisation des activités à facturer",
+                "Nombre illimité de sociétés",
+                "Nombre illimité d’adresses et d’articles",
+                "Nombre illimité de collaborateurs et d’activités",
+                "Nombre illimité de salariés",
+                "Nombre illimité de monnaies étrangères",
+                "Extensions Winbiz intégrées",
+                "Winbiz Projets intégré",
+                "Winbiz Caisse intégré",
+                "Gestion d’utilisateurs par caisse",
+                "Paiements en espèces ou par carte"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "des options, qui ne sont pas en option",
+            "text": "voir toutes les options",
+            "options": [
+                "Comptabilité",
+                "Commerce",
+                "Salaires",
+                "Projets",
+                "Caisse"
+            ]
+        }
+    ]
+}

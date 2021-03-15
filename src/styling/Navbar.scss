@@ -1,0 +1,310 @@
+// Presets 
+
+$ctaColor: #0000DF;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+    font-family: 'CamptonBold';
+}
+
+@mixin semiBoldFont {
+    font-family: 'CamptonSemiBold';
+}
+
+@mixin mediumFont {
+    font-family: 'CamptonMedium';
+}
+
+@mixin bookFont {
+    font-family: 'CamptonBook';
+}
+
+//Button Mixins
+
+@mixin navButtonLayout($x: 25px) {
+    border: none;
+    padding: 8px $x;
+    border-radius: 30px;
+    outline: none;
+}
+
+@mixin buttonText {
+    text-transform: uppercase;
+    @include semiBoldFont;
+    font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+    transition: all 0.3s ease;
+}
+
+//Triangle Mixin
+
+@mixin triangle($bottom: 0, $right: 0) {
+    position: relative;
+    text-align: right;
+    @include mediumFont;
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: $bottom;
+        right: $right;
+        background: transparent;
+        border-style: solid;
+        border-color: $ctaColor;
+        border-width: 18px 15px;
+        border-color: $ctaColor $ctaColor transparent transparent;
+    }
+}
+
+
+
+//Styling
+
+.navbar {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: flex-start !important;
+    padding: 60px 0 0 0 !important;
+    box-shadow: none !important;
+    z-index: 110;
+
+    .navWrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        margin: $pageMargin;
+
+        .items {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 35px;
+            margin: 0;
+            padding: 0;
+
+            .navItem {
+                list-style: none;
+                
+                .navLink {
+                    position: relative;
+                    @include buttonText;
+                    background: transparent;
+                    color: #ffffff;
+                    @include hoverTransition;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background-color: #ffffff;
+                        @include hoverTransition;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: darken(#ffffff, 10%);
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .active {
+                    color: darken(#ffffff, 10%);
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #ffffff;
+                    }
+                }
+
+                .blackLink {
+                    position: relative;
+                    @include buttonText;
+                    background: transparent;
+                    color: #000000;
+                    @include hoverTransition;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background-color: #000000;
+                        @include hoverTransition;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        color: lighten(#000000, 10%);
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .blackActive {
+                    color: lighten(#000000, 10%);
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #000000;
+                    }
+                }
+
+                .product {
+                    position: relative;
+                    @include callToAction;
+                    @include buttonText;
+                    @include hoverTransition;
+
+                    &:hover {
+                        background-color: lighten($ctaColor, 10%);
+                    }
+                }
+            }
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        .rightSide {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .buttonsWrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                
+                .user {
+                    @include navButtonLayout();
+                    @include buttonText;
+                    color: #ffffff;
+                    background: rgba($color: #585858, $alpha: 0.6);
+                    @include hoverTransition;
+
+                    &:hover {
+                        background-color: $hoverButton;
+                    }
+                }
+
+                .languageBtn {
+                    @include navButtonLayout(15px);
+                    @include buttonText;
+                    color: #ffffff;
+                    background: rgba($color: #585858, $alpha: 0.6);
+                    @include hoverTransition;
+
+                    &:hover {
+                        background-color: $hoverButton;
+                    }
+                }
+
+                #spacer {
+                    width: 20px;
+                    height: 25px;
+                }
+            }
+
+            .logoWrapper {
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                .logo {
+                    @include boldFont;
+                    color: $primaryBlack;
+                    margin-left: 30px;
+                    font-size: 40px;
+                    text-align: end;
+                    line-height: 33px !important;
+
+                    .pngLogo {
+                        width: 120px;
+                        height: auto;
+                    }
+
+                    .pngBlack {
+                        width: 120px;
+                        height: auto;
+                        mix-blend-mode: difference;
+                        filter: invert(100%);
+                    }
+                }
+
+                .concepts {
+                    margin: 50px 5px 0 0;
+                    color: white;
+                    @include triangle(-75px, 0);
+                }
+
+                .blackConcepts {
+                    margin: 50px 5px 0 0;
+                    color: #000000;
+                    @include triangle(-75px, 0);
+                }
+            }
+        }
+    }
+}

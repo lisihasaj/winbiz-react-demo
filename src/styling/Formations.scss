@@ -1,0 +1,868 @@
+// Presets
+
+$ctaColor: #0000df;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+$textOnPrimary: #6e6e6e;
+$footerText: #b1b2b5;
+$placeholderText: #707070;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+  font-family: "CamptonBold";
+}
+
+@mixin semiBoldFont {
+  font-family: "CamptonSemiBold";
+}
+
+@mixin mediumFont {
+  font-family: "CamptonMedium";
+}
+
+@mixin bookFont {
+  font-family: "CamptonBook";
+}
+
+//Button Mixins
+
+@mixin navButtonLayout {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+}
+
+@mixin buttonText {
+  text-transform: uppercase;
+  @include semiBoldFont;
+  font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+  transition: all 0.3s ease;
+}
+
+//Arrow Mixin
+
+@mixin arrowButton($color: #6e6e6e) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  height: auto !important;
+  background: transparent;
+}
+
+//Triangle Mixin
+
+@mixin triangle($top: 0, $left: 0) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: transparent;
+    border-style: solid;
+    border-color: $ctaColor;
+    border-width: 18px 15px;
+    border-color: $ctaColor transparent transparent $ctaColor;
+  }
+}
+
+//SubPage NavLink Mixin
+
+@mixin navLink($color: #000000) {
+  @include mediumFont;
+  position: relative;
+  width: auto;
+  height: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: $color;
+  margin: 0 2.5vw;
+  text-transform: uppercase;
+  text-align: start;
+  font-size: 18px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 4px;
+    width: 100px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+
+  &:focus,
+  &:hover {
+    color: white;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+//Input Mixins
+
+@mixin label($color: #000000) {
+  @include bookFont;
+  color: $color;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+@mixin inputData {
+  width: 100% !important;
+  height: 45px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 13px;
+  background-color: #EAEAEA;
+
+  &::placeholder {
+    color: $placeholderText;
+    @include bookFont;
+    font-size: 14px;
+  }
+}
+
+//Styling
+
+.groupTrainings {
+  position: relative;
+  width: 100%;
+  z-index: 50;
+
+  .groupTrainingsHeader {
+    position: relative;
+    padding: $pageMargin;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 523px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 0;
+      width: 1920px;
+      height: auto;
+      opacity: 0.7;
+    }
+
+    .backBtn {
+      position: absolute;
+      left: 5vw;
+      top: 40%;
+      bottom: 60%;
+      margin: auto;
+      @include bookFont;
+      background: transparent;
+      border: none;
+      z-index: 110;
+
+      .link {
+        @include bookFont;
+        color: white;
+        font-size: 16px;
+      }
+    }
+
+    .headingsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16vh;
+      z-index: 110;
+
+      .title {
+        @include boldFont;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .subTitle {
+        @include mediumFont;
+        color: white;
+        text-align: center;
+      }
+    }
+
+    .trainingsNav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      .navLink {
+        @include navLink($hoverButton)
+      }
+
+      .active {
+        position: relative;
+        color: white;
+        width: auto;
+        height: 45px;
+        display: flex;
+        margin: 0 2.5vw;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-transform: uppercase;
+        text-align: start;
+        font-size: 18px;
+        overflow: hidden;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          height: 4px;
+          width: 100px;
+          background-color: white;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    .trainingsNav {
+      z-index: 101;
+    }
+  }
+
+  .trainingType {
+    position: relative;
+    padding: $pageMargin;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $primaryWhite;
+    align-items: center;
+
+    .buttonsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 90px;
+
+      .training {
+        @include mediumFont;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $placeholderText;
+        background: #EAEAEA;
+        padding: 8px 20px;
+        margin: 3vh 1vw 0 1vw;
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+        @include hoverTransition;
+
+        &:focus,
+        &:hover {
+          background: $ctaColor;
+          color: white;
+        }
+      }
+
+      .activeTraining {
+        @include mediumFont;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: white;
+        background: $ctaColor;
+        padding: 8px 20px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+      }
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .text {
+        @include bookFont;
+        font-size: 18px;
+        margin-bottom: 75px;
+      }
+
+      .justText {
+        @include bookFont;
+        font-size: 18px;
+      }
+
+      .title {
+        @include boldFont;
+        color: $ctaColor;
+        font-size: 35px;
+        margin-bottom: 25px;
+      }
+
+      .courseElements {
+        padding-left: 10px;
+        margin-bottom: 50px;
+
+        .element {
+          @include bookFont;
+          font-size: 18px;
+
+          .arrow {
+            color: $ctaColor;
+          }
+        }
+      }
+    }
+
+    .subscriptionSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      .question {
+        @include mediumFont;
+        text-align: center;
+        color: $placeholderText;
+        margin-top: 30px;
+        margin-bottom: 25px;
+      }
+
+      .subscribe {
+        @include callToAction;
+        @include buttonText;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .additionalsContainer {
+    position: relative;
+    padding: $pageMargin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryWhite;
+
+    .additionals {
+      display: flex;
+      padding: 45px 0 100px 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .additionalsTitle {
+        text-align: start;
+        @include mediumFont;
+        color: #585858;
+        margin-bottom: 20px;
+      }
+
+      .cardsContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .imageContainer {
+          margin: 10px 0;
+
+          .route {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            margin: 0 10px;
+
+            .imageWrapper {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+              border-radius: 15px;
+              height: 166px;
+              width: auto;
+              box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+
+              .gradientLayer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0) 0%,
+                  rgba(0, 0, 0, 0.6) 100%
+                );
+              }
+
+              .trainingImage {
+                height: 180;
+                width: auto;
+                z-index: 99;
+                @include hoverTransition;
+              }
+
+              .titleWrapper {
+                position: absolute;
+                top: 20px;
+                left: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 90%;
+                z-index: 101;
+
+                .trainingTitle {
+                  @include mediumFont;
+                  text-transform: uppercase;
+                  margin: 0;
+                  color: white;
+                  text-align: start;
+                  white-space: pre-wrap;
+                  white-space: -moz-pre-wrap;
+                  white-space: -pre-wrap;
+                  white-space: -o-pre-wrap;
+                  word-wrap: break-word;
+                }
+
+                .subtitle {
+                  @include bookFont;
+                  color: white;
+                  margin: 0;
+                  font-size: 16px;
+                  text-align: start;
+                  white-space: pre-wrap;
+                  white-space: -moz-pre-wrap;
+                  white-space: -pre-wrap;
+                  white-space: -o-pre-wrap;
+                  word-wrap: break-word;
+                }
+              }
+
+              &:hover {
+                
+                .trainingImage {
+                  transform: scale(1.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.formationSubscribe {
+  position: relative;
+  width: 100%;
+  background-color: $primaryWhite;
+
+  .subscribeFormHeader {
+    position: relative;
+    height: 418px;
+    padding: $pageMargin;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+    .backBtn {
+      position: absolute;
+      left: 5vw;
+      top: 70%;
+      bottom: 30%;
+      right: 88%;
+      left: 12%;
+      margin: auto;
+      @include bookFont;
+      background: transparent;
+      border: none;
+      z-index: 110;
+
+      .link {
+        @include mediumFont;
+        color: $ctaColor;
+        font-size: 16px;
+      }
+    }
+
+    .headingsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10vh;
+      z-index: 110;
+
+      .title {
+        @include boldFont;
+        color: #000000;
+        text-transform: uppercase;
+      }
+
+      .subTitle {
+        @include mediumFont;
+        color: #000000;
+      }
+    }
+  }
+
+  .formSection {
+    position: relative;
+    padding: 0 5vw 55px 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+    .formWrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 100px;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .stepTitle {
+          @include semiBoldFont;
+          color: $ctaColor;
+          font-size: 30px;
+          text-transform: uppercase;
+        }
+
+        .stepSubtitle {
+          @include mediumFont;
+          color: #585858;
+          font-size: 20px;
+        }
+      }
+
+      .inputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 45px;
+
+        .formGroupTitle {
+          @include mediumFont;
+          color: $ctaColor;
+          font-size: 20px;
+          margin-bottom: 12px;
+        }
+
+        .personalDataInput {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 85px;
+
+          .PDInput {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            max-width: 49% !important;
+
+            .label {
+              @include label();
+            }
+
+            .theInput {
+              @include inputData;
+            }
+
+            .error {
+              @include bookFont;
+              font-size: 14px;
+              color: red;
+              margin-left: 15px;
+            }
+          }
+        }
+
+        .addressDataInput {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 35px;
+
+          .addressInput {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            max-width: 100% !important;
+
+            .label {
+              @include label();
+            }
+
+            .theInput {
+              @include inputData;
+            }
+          }
+
+          .PDInput {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            max-width: 49% !important;
+
+            .label {
+              @include label();
+            }
+
+            .theInput {
+              @include inputData;
+            }
+          }
+        }
+
+        .btnWrapper {
+          display: flex;
+          justify-content: flex-end;
+
+          .submit {
+            @include callToAction;
+            @include buttonText;
+          }
+        }
+      }
+    }
+
+    .feedbackSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      .messageBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #EAEAEA;
+        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+        padding: 50px 30px;
+        margin-bottom: 80px;
+        border-radius: 20px;
+
+        .messageTitle {
+          @include boldFont;
+          font-size: 25px;
+          color: $ctaColor;
+          margin-bottom: 25px;
+          text-transform: uppercase;
+          text-align: center;
+        }
+
+        .messageSubTitle {
+          @include mediumFont;
+          color: #000000;
+          font-size: 20px;
+          margin-bottom: 30px;
+          text-align: center;
+          width: 70%;
+        }
+
+        .backToHome {
+          @include mediumFont;
+          color: $ctaColor;
+          text-align: center;
+        }
+      }
+
+      .additionals {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 25px;
+
+        .additionalsTitle {
+          text-align: start;
+          @include mediumFont;
+          color: #585858;
+          margin-bottom: 20px;
+        }
+
+        .cardsContainer {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .imageContainer {
+            margin: 10px 0;
+
+            .route {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: auto;
+              margin: 0 10px;
+
+              .imageWrapper {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                border-radius: 15px;
+                height: 166px;
+                width: auto;
+                box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+
+                .gradientLayer {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 100;
+                  background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(0, 0, 0, 0.6) 100%
+                  );
+                }
+
+                .trainingImage {
+                  height: 180;
+                  width: auto;
+                  z-index: 99;
+                  @include hoverTransition;
+                }
+
+                .titleWrapper {
+                  position: absolute;
+                  top: 20px;
+                  left: 30px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  width: 90%;
+                  z-index: 101;
+
+                  .trainingTitle {
+                    @include mediumFont;
+                    text-transform: uppercase;
+                    margin: 0;
+                    color: white;
+                    text-align: start;
+                    white-space: pre-wrap;
+                    white-space: -moz-pre-wrap;
+                    white-space: -pre-wrap;
+                    white-space: -o-pre-wrap;
+                    word-wrap: break-word;
+                  }
+
+                  .subtitle {
+                    @include bookFont;
+                    color: white;
+                    margin: 0;
+                    font-size: 16px;
+                    text-align: start;
+                    white-space: pre-wrap;
+                    white-space: -moz-pre-wrap;
+                    white-space: -pre-wrap;
+                    white-space: -o-pre-wrap;
+                    word-wrap: break-word;
+                  }
+                }
+
+                &:hover {
+                  
+                  .trainingImage {
+                    transform: scale(1.1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .buttonWrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+
+        .backToTrainings {
+          @include mediumFont;
+          color: $ctaColor;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

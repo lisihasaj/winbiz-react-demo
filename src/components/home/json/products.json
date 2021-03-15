@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "title": "ReceiptScan Basic1",
+        "thumbnail": "Editeur : Komunik",
+        "price": "CHF 6.90",
+        "extensions": [
+            "plus d'infos",
+            "ajouter au panier"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "ReceiptScan Basic2",
+        "thumbnail": "Editeur : Komunik",
+        "price": "FREE",
+        "extensions": [
+            "plus d'infos",
+            "ajouter au panier"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "ReceiptScan Basic3",
+        "thumbnail": "Editeur : Komunik",
+        "price": "FREE",
+        "extensions": [
+            "plus d'infos",
+            "ajouter au panier"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "ReceiptScan Basic4",
+        "thumbnail": "Editeur : Komunik",
+        "price": "CHF 6.90",
+        "extensions": [
+            "plus d'infos",
+            "ajouter au panier"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "ReceiptScan Basic5",
+        "thumbnail": "Editeur : Komunik",
+        "price": "FREE",
+        "extensions": [
+            "plus d'infos",
+            "ajouter au panier"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "ReceiptScan Basic6",
+        "thumbnail": "Editeur : Komunik",
+        "price": "FREE",
+        "extensions": [
+            "plus d'infos",
+            "ajouter au panier"
+        ]
+    }
+]

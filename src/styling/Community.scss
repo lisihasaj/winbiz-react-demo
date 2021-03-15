@@ -1,0 +1,734 @@
+// Presets
+
+$ctaColor: #0000df;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+$textOnPrimary: #6e6e6e;
+$footerText: #b1b2b5;
+$placeholderText: #707070;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+  font-family: "CamptonBold";
+}
+
+@mixin semiBoldFont {
+  font-family: "CamptonSemiBold";
+}
+
+@mixin mediumFont {
+  font-family: "CamptonMedium";
+}
+
+@mixin bookFont {
+  font-family: "CamptonBook";
+}
+
+//Button Mixins
+
+@mixin navButtonLayout {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+}
+
+@mixin buttonText {
+  text-transform: uppercase;
+  @include semiBoldFont;
+  font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+  transition: all 0.3s ease;
+}
+
+//Arrow Mixin
+
+@mixin arrowButton($color: #6e6e6e) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  height: auto !important;
+  background: transparent;
+}
+
+//Triangle Mixin
+
+@mixin triangle($top: 0, $left: 0) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: transparent;
+    border-style: solid;
+    border-color: $ctaColor;
+    border-width: 18px 15px;
+    border-color: $ctaColor transparent transparent $ctaColor;
+  }
+}
+
+//SubPage NavLink Mixin
+
+@mixin navLink($color: #000000) {
+  @include mediumFont;
+  position: relative;
+  width: auto;
+  height: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: $color;
+  margin-right: 5vw;
+  text-transform: uppercase;
+  text-align: start;
+  font-size: 18px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 4px;
+    width: 100px;
+    background-color: $ctaColor;
+    transition: all 0.3s ease;
+  }
+
+  &:focus,
+  &:hover {
+    color: $ctaColor;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+//Styling
+
+.community {
+  position: relative;
+  width: 100%;
+
+  .header {
+    display: flex;
+    padding: $pageMargin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryBlack;
+    height: 725px;
+
+    .titleWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        @include boldFont;
+        color: white;
+        text-align: center;
+        font-size: 74px;
+        margin-bottom: 15px;
+      }
+
+      .description {
+        @include mediumFont;
+        color: white;
+        text-align: center;
+      }
+    }
+
+    .inputWrapper {
+      .inputContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .label {
+          @include bookFont;
+          color: white;
+        }
+
+        .inputBox {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          background-color: $placeholderText;
+          border-radius: 18px;
+          width: 570px;
+          height: 46px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 48px;
+            height: 30px;
+            width: 1px;
+            background: #d6d6d6;
+          }
+
+          .searchIcon {
+            color: #d6d6d6;
+            font-size: 40px;
+            padding-left: 15px;
+          }
+
+          .searchInput {
+            background: transparent;
+            border: none;
+            outline: none;
+            width: 510px;
+          }
+
+          ::placeholder {
+            color: #d6d6d6 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .mediaSection {
+    display: flex;
+    padding: 100px 0 100px 5vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: $primaryWhite;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    .title {
+      @include boldFont;
+      color: #000000;
+      font-size: 34px;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+    }
+
+    .sliderContainer {
+      width: 100%;
+      margin-bottom: 30px;
+
+      .cardWrapper {
+        position: relative;
+        padding: 0;
+        margin: 0 40px 0 5px;
+        border-radius: 20px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 430px;
+        height: 560px;
+        overflow: hidden !important;
+        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+
+        .gradientLayer {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 560px;
+          z-index: 100;
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0.6) 100%
+          );
+        }
+
+        .image {
+          height: auto;
+          opacity: 1;
+          @include hoverTransition;
+          margin-left: 20px;
+        }
+
+        .textWrapper {
+          @include triangle(-50px, 15px);
+          position: absolute;
+          bottom: 15px;
+          left: 10px;
+          z-index: 101;
+          max-width: 420px !important;
+          height: 15%;
+
+          .cardTitle {
+            @include mediumFont;
+            color: white;
+            text-align: start;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+          }
+        }
+
+        &:hover {
+          .image {
+            transform: scale(1.04);
+          }
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: auto;
+      padding: 0 5vw 0 0;
+
+      .arrowLeft {
+        @include arrowButton($ctaColor);
+        margin-right: 5px;
+      }
+
+      .pages {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .page {
+          width: 20px;
+          height: 3px;
+          background-color: #5f5fee;
+          z-index: 100;
+        }
+
+        .pageActive {
+          height: 5px;
+          background-color: $ctaColor;
+        }
+      }
+
+      .arrowRight {
+        @include arrowButton($ctaColor);
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .trainings {
+    display: flex;
+    padding: 100px 5vw 105px 5vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+
+    .title {
+      @include boldFont;
+      color: #000000;
+      font-size: 34px;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+    }
+
+    .trainingsNav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+
+      .navLink {
+        @include navLink($textOnPrimary);
+      }
+
+      .active {
+        position: relative;
+        color: $ctaColor;
+        width: auto;
+        height: 45px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-right: 5vw;
+        text-transform: uppercase;
+        text-align: start;
+        font-size: 18px;
+        overflow: hidden;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          height: 4px;
+          width: 100px;
+          background-color: $ctaColor;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    #id {
+      height: 1px;
+    }
+
+    .trainingGroupContainer {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      .imageContainer {
+        margin: 10px 0;
+
+        .route {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+          margin: 0 10px;
+
+          .imageWrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 166px;
+            width: auto;
+            box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+
+            .gradientLayer {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 100;
+              background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(0, 0, 0, 0.6) 100%
+              );
+            }
+
+            .trainingImage {
+              height: 180;
+              width: auto;
+              z-index: 99;
+              @include hoverTransition;
+            }
+
+            .trainingTitle {
+              position: absolute;
+              bottom: 20px;
+              left: 30px;
+              width: 90%;
+              @include mediumFont;
+              text-transform: uppercase;
+              color: white;
+              text-align: start;
+              white-space: pre-wrap;
+              white-space: -moz-pre-wrap;
+              white-space: -pre-wrap;
+              white-space: -o-pre-wrap;
+              word-wrap: break-word;
+              z-index: 101;
+            }
+
+            &:hover {
+              .trainingImage {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .videosSection {
+    display: flex;
+    padding: 80px 5vw 95px 5vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+
+    .title {
+      @include boldFont;
+      color: #000000;
+      font-size: 34px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .resultsBox {
+      display: flex;
+      justify-content: flex-end;
+
+      .totalVideos {
+        margin: 0;
+        @include bookFont;
+        color: $textOnPrimary;
+      }
+    }
+
+    .filtersContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 100px;
+
+      .sorterBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 20px;
+
+        .label {
+          color: #000000;
+          @include bookFont;
+          text-align: start;
+          margin-bottom: 5px;
+        }
+
+        .sorterWrapper {
+          background-color: #eaeaea;
+          border-radius: 10px;
+          padding: 6px 5px;
+          box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+        }
+
+        .sorter {
+          @include bookFont;
+          color: $placeholderText;
+          background: transparent;
+          border: none;
+          outline: none;
+          padding: 0 20px 0 5px;
+          @include hoverTransition;
+          display: -webkit-box;
+          -webkit-line-clamp: 0;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        &:hover {
+          .sorter {
+            color: $ctaColor;
+          }
+        }
+      }
+
+      .searchBox {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 0;
+
+        .inputBox {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          background-color: #eaeaea;
+          border-radius: 10px;
+          width: 280px;
+          box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 43px;
+            height: 20px;
+            width: 1px;
+            background: $placeholderText;
+          }
+
+          .searchIcon {
+            color: $placeholderText;
+            font-size: 35px;
+            padding-left: 15px;
+          }
+
+          .searchInput {
+            background: transparent;
+            border: none;
+            outline: none;
+            width: 230px;
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+
+    .cardsContainer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .cardWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 10px;
+        margin-bottom: 65px;
+
+        .imageWrapper {
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 185px;
+          border-radius: 15px;
+          background: #000000;
+          box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+
+          .image {
+            opacity: 1;
+            height: 300px;
+            width: auto;
+            @include hoverTransition;
+            z-index: 99;
+          }
+
+          .logoIcon {
+            position: absolute;
+            top: 20px;
+            left: 18px;
+            width: 55px;
+            height: auto;
+            z-index: 101;
+          }
+
+          .timer {
+            position: absolute;
+            bottom: 13px;
+            right: 20px;
+            @include bookFont;
+            color: #000000;
+            font-size: 16px;
+            background: $footerText;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 101;
+          }
+        }
+
+        .elementsWrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 0 5px;
+
+          .date {
+            @include bookFont;
+            font-size: 12px;
+            color: $placeholderText;
+            margin-top: 15px;
+            margin-bottom: 10px;
+          }
+
+          .cardTitle {
+            @include mediumFont;
+            font-size: 18px;
+            color: #000000;
+          }
+
+          .buttonsContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .keyWords {
+              @include bookFont;
+              font-size: 12px;
+              color: $placeholderText;
+              background-color: rgb(216, 216, 216);
+              padding: 3px 10px;
+              border: none;
+              border-radius: 5px;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        &:hover {
+          .image {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    .loadMoreBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .lazyLoadButton {
+        @include bookFont;
+        font-size: 18px;
+        color: #000000;
+        background: rgb(216, 216, 216);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 35px;
+        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+        @include hoverTransition;
+
+        &:hover {
+          color: $ctaColor;
+        }
+      }
+    }
+  }
+}

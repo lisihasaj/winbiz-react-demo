@@ -1,0 +1,104 @@
+[
+    {
+        "id": 0,
+        "title": "étape 1",
+        "subtitle":"Je souhaite prendre contact concernant:",
+        "cards": [
+            {
+                "id": 0,
+                "title": "Sujet 1",
+                "icon": "/winbiz/assets/e1s1.png"
+            },
+            {
+                "id": 1,
+                "title": "Sujet 2",
+                "icon": "/winbiz/assets/e1s2.png"
+            },
+            {
+                "id": 2,
+                "title": "Sujet 3",
+                "icon": "/winbiz/assets/e1s3.png"
+            },
+            {
+                "id": 3,
+                "title": "Sujet 4",
+                "icon": "/winbiz/assets/e1s4.png"
+            },
+            {
+                "id": 4,
+                "title": "Sujet 5",
+                "icon": "/winbiz/assets/e1s5.png"
+            },
+            {
+                "id": 5,
+                "title": "autres",
+                "icon": "/winbiz/assets/e1s6.png"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "étape 2",
+        "subtitle":"Ma demande concerne plus particulièrement:",
+        "cards": [
+            {
+                "id": 0,
+                "title": "Sous sujet 1",
+                "icon": "/winbiz/assets/e2s1.png"
+            },
+            {
+                "id": 1,
+                "title": "Sous sujet 2",
+                "icon": "/winbiz/assets/e2s2.png"
+            },
+            {
+                "id": 2,
+                "title": "Sous sujet 3",
+                "icon": "/winbiz/assets/e2s3.png"
+            },
+            {
+                "id": 3,
+                "title": "Sous sujet 4",
+                "icon": "/winbiz/assets/e2s4.png"
+            },
+            {
+                "id": 4,
+                "title": "Sous sujet 5",
+                "icon": "/winbiz/assets/e2s5.png"
+            },
+            {
+                "id": 5,
+                "title": "Autres",
+                "icon": "/winbiz/assets/e2s6.png"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "étape 3",
+        "subtitle":"Prenons contact:",
+        "cards": [
+            {
+                "id": 0,
+                "title": "FAQ",
+                "description": "Vous trouverez la réponse dans notre foire aux questions.",
+                "thumbnail": "aller à la FAQ",
+                "icon": "/winbiz/assets/e3s1.png"
+            },
+            {
+                "id": 1,
+                "title": "Téléphone",
+                "description": "Vous pouvez directement appeler notre service client.",
+                "thumbnail": "058 200 25 00",
+                "icon": "/winbiz/assets/e3s2.png"
+            },
+            {
+                "id": 2,
+                "title": "message",
+                "description": "Vous n’avez pas trouvé votre réponse? Ecrivez-nous.",
+                "thumbnail": "formulaire de contact",
+                "icon": "/winbiz/assets/e3s3.png"
+            }
+        ]
+    }
+]

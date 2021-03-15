@@ -1,0 +1,1780 @@
+// Presets
+
+$ctaColor: #0000df;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+$textOnPrimary: #6e6e6e;
+$footerText: #b1b2b5;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+  font-family: "CamptonBold";
+}
+
+@mixin semiBoldFont {
+  font-family: "CamptonSemiBold";
+}
+
+@mixin mediumFont {
+  font-family: "CamptonMedium";
+}
+
+@mixin bookFont {
+  font-family: "CamptonBook";
+}
+
+//Button Mixins
+
+@mixin navButtonLayout {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+}
+
+@mixin buttonText {
+  text-transform: uppercase;
+  @include semiBoldFont;
+  font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+  transition: all 0.3s ease;
+}
+
+//Arrow Mixin
+
+@mixin arrowButton($color: #6e6e6e) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  height: auto !important;
+  background: transparent;
+}
+
+//Triangle Mixin
+
+@mixin triangle($top: 0, $left: 0) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: transparent;
+    border-style: solid;
+    border-color: $ctaColor;
+    border-width: 18px 15px;
+    border-color: $ctaColor transparent transparent $ctaColor;
+  }
+}
+
+//Styling
+
+
+@media (max-width: 1199px) {
+
+    .offersSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 5vw;
+        overflow: hidden;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .titleBox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+                .title {
+                    font-size: 30px;
+                    text-align: center;
+                }
+            }
+
+            .offersWrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: space-between;
+                justify-content: flex-start;
+
+                .layoutWrapper {
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+                    margin-right: 20px;
+                    max-width: 550px !important;
+                    min-width: 550px;
+                    padding: 40px 50px;
+
+                    .number {
+                        font-size: 80px;
+                    }
+                }
+
+                .additionalsWrapper {
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    max-width: 480px;
+                    padding: 40px 50px;
+
+                    .descr {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1025px) {
+    .home {
+
+        .header {
+            height: 800px;
+            background-position: 74% 0%;
+
+            .gradientLayer {
+                height: 400px;
+                width: 100%;
+            }
+
+            .contentWrapper {
+                height: 60%;
+
+                .heading {
+
+                    .sliderBox {
+
+                        .overflowWrapper {
+                            width: auto;
+                            max-height: 152px !important;
+
+                            .content {
+
+                                .title {
+                                    font-size: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wideScrContent {
+
+                    .rightContainer {
+
+                        .name {
+                            margin-top: 1vh;
+                        }
+
+                        .thumbnail {
+                            margin-top: 15vh;
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .statistics {
+            height: auto;
+            padding: 60px 5vw;
+            overflow: hidden;
+
+            .statsWrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .stat {
+                    margin: 20px 0;
+
+                    .image {
+                        margin-bottom: 12px;
+                        width: 110px;
+                        height: auto;
+                    }
+
+                    .description {
+                        width: 80%;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .buttonWrapper {
+
+                .statsCTA {
+
+                }
+            }
+        }
+
+        .offersSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 5vw;
+            overflow: hidden;
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+                .titleBox {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .title {
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                }
+
+                .offersWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .layoutWrapper {
+                        margin-top: 50px;
+                        margin-bottom: 20px;
+                        max-width: 550px !important;
+                        min-width: 550px;
+                        padding: 40px 50px;
+
+                        .number {
+                            font-size: 80px;
+                        }
+                    }
+
+                    .additionalsWrapper {
+                        margin-top: 20px;
+                        max-width: 480px;
+                        padding: 40px 50px;
+
+                        .descr {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .whiteSection {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 30px;
+            }
+
+            .image {
+                width: 600px;
+            }
+        }
+
+        .appSection {
+            height: 750px;
+            background-position: 82% 0%;
+
+            .fullScreenGradience {
+                height: 750px;
+                width: 100%;
+            }
+
+            .textWrapper {
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+
+                .title {
+                    font-size: 40px;
+                    @include triangle(-80px, 0);
+                    margin-bottom: 70px;
+                }
+
+                .imageWrapper {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        .advantages {
+            padding: 65px 5vw 70px 5vw;
+
+            .title {
+                font-size: 34px;
+                margin-bottom: 50px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                min-width: 100%;
+                margin-bottom: 20px;
+
+                .box {
+                    margin-bottom: 40px;
+                    padding: 0;
+
+                    .image {
+                        margin-bottom: 15px;
+                        width: 110px;
+                        height: auto;
+                    }
+
+                    .boxTitle {
+                        font-size: 20px;
+                    }
+
+                    .description {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+
+        .product {
+            padding: 70px 0 70px 5vw;
+
+            .topWrapper {
+                margin-bottom: 30px;
+
+                .titleContainer {
+
+                    .title {
+                        font-size: 40px;
+
+                        .plus {
+                            margin: 6px 0 0 7px;
+                            font-size: 34px;
+                        }
+                    }
+                }
+
+                .buttonContainer {
+
+                    .sectionCTA {
+                        @include callToAction;
+                    }
+                }
+            }
+
+            .sliderContainer {
+                margin-bottom: 35px;
+
+                .cardWrapper {
+                    min-width: 420px;
+
+                    .imageWrapper {
+
+                        .image {
+                            margin-right: 10px;
+                            width: 115px;
+                            height: 115px;
+                        }
+                    }
+
+                    .elementsWrapper {
+
+                        .title {
+                            font-size: 22px;
+                        }
+
+                        .price {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .partners {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 50px;
+            }
+
+            .allLogos {
+                width: 100%;
+
+                .partner {
+                    margin-bottom: 35px;
+
+                    .image {
+                        width: 90px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .testimonials {
+            position: relative;
+            padding: 70px 5vw;
+            background-position: 28% 0%;
+
+            .contentWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .sliderContainer {
+
+                    .leftWrapper {
+                        margin-bottom: 10px;
+                        max-height: 135px;
+
+                        .slider {
+
+                            .content {
+                                font-size: 40px;
+                                line-height: 38px;
+                            }
+                        }
+                    }
+                }
+
+                .rightSlider {
+                    position: absolute;
+                    max-width: 300px;
+                    right: 18vw;
+
+                    .rightWrapper {
+                        max-height: 200px;
+                        max-width: 310px;
+                        margin-left: 50px;
+
+                        .slider {
+
+                            .statement {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 769px) {
+    .home {
+
+        .header {
+            height: 800px;
+            background-position: 74% 0%;
+
+            .gradientLayer {
+                height: 400px;
+                width: 100%;
+            }
+
+            .contentWrapper {
+                height: 60%;
+
+                .heading {
+
+                    .sliderBox {
+
+                        .overflowWrapper {
+                            width: auto;
+                            max-height: 152px !important;
+
+                            .content {
+
+                                .title {
+                                    font-size: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wideScrContent {
+
+                    .rightContainer {
+
+                        .name {
+                            margin-top: 1vh;
+                        }
+
+                        .thumbnail {
+                            margin-top: 15vh;
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .statistics {
+            height: auto;
+            padding: 60px 5vw;
+            overflow: hidden;
+
+            .statsWrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .stat {
+                    margin: 20px 0;
+
+                    .image {
+                        margin-bottom: 12px;
+                        width: 110px;
+                        height: auto;
+                    }
+
+                    .description {
+                        width: 80%;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .offersSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 70px 5vw;
+            overflow: hidden;
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .titleBox {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .title {
+                        font-size: 30px;
+                        text-align: center;
+                    }
+                }
+
+                .offersWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .layoutWrapper {
+                        margin-top: 50px;
+                        margin-bottom: 20px;
+                        max-width: 550px !important;
+                        min-width: 550px;
+                        padding: 40px 50px;
+
+                        .number {
+                            font-size: 80px;
+                        }
+                    }
+
+                    .additionalsWrapper {
+                        margin-top: 20px;
+                        max-width: 480px;
+                        padding: 40px 50px;
+
+                        .descr {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .whiteSection {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 30px;
+            }
+
+            .image {
+                width: 450px;
+            }
+        }
+
+        .appSection {
+            height: 750px;
+            background-position: 82% 0%;
+
+            .fullScreenGradience {
+                height: 750px;
+                width: 100%;
+            }
+
+            .textWrapper {
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+
+                .title {
+                    font-size: 40px;
+                    @include triangle(-80px, 0);
+                    margin-bottom: 70px;
+                }
+
+                .imageWrapper {
+                    margin-bottom: 50px;
+                }
+
+                .image {
+
+                }
+            }
+        }
+
+        .advantages {
+            padding: 65px 5vw 70px 5vw;
+
+            .title {
+                font-size: 34px;
+                margin-bottom: 50px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                min-width: 100%;
+                margin-bottom: 20px;
+
+                .box {
+                    margin-bottom: 40px;
+                    padding: 0;
+
+                    .image {
+                        margin-bottom: 15px;
+                        width: 110px;
+                        height: auto;
+                    }
+
+                    .boxTitle {
+                        font-size: 20px;
+                    }
+
+                    .description {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+
+        .product {
+            padding: 70px 0 70px 5vw;
+
+            .topWrapper {
+                margin-bottom: 30px;
+
+                .titleContainer {
+
+                    .title {
+                        font-size: 40px;
+
+                        .plus {
+                            margin: 6px 0 0 7px;
+                            font-size: 34px;
+                        }
+                    }
+                }
+
+                .buttonContainer {
+
+                    .sectionCTA {
+                        @include callToAction;
+                    }
+                }
+            }
+
+            .sliderContainer {
+                margin-bottom: 35px;
+
+                .cardWrapper {
+                    min-width: 420px;
+
+                    .imageWrapper {
+
+                        .image {
+                            margin-right: 10px;
+                            width: 115px;
+                            height: 115px;
+                        }
+                    }
+
+                    .elementsWrapper {
+
+                        .title {
+                            font-size: 22px;
+                        }
+
+                        .price {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .partners {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 50px;
+            }
+
+            .allLogos {
+                width: 100%;
+
+                .partner {
+                    margin-bottom: 35px;
+
+                    .image {
+                        width: 90px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .testimonials {
+            position: relative;
+            padding: 70px 5vw;
+            background-position: 28% 0%;
+
+            .contentWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .sliderContainer {
+
+                    .leftWrapper {
+                        margin-bottom: 10px;
+                        max-height: 135px;
+
+                        .slider {
+
+                            .content {
+                                font-size: 40px;
+                                line-height: 38px;
+                            }
+                        }
+                    }
+                }
+
+                .rightSlider {
+                    position: absolute;
+                    max-width: 300px;
+                    right: 5vw;
+
+                    .rightWrapper {
+                        max-height: 200px;
+                        max-width: 310px;
+                        margin-left: 50px;
+
+                        .slider {
+
+                            .statement {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 541px) {
+    .home {
+
+        .header {
+            height: 750px;
+            background-position: 74% 0%;
+
+            .gradientLayer {
+                height: 400px;
+                width: 100%;
+            }
+
+            .contentWrapper {
+                height: 60%;
+
+                .heading {
+
+                    .sliderBox {
+
+                        .overflowWrapper {
+                            width: auto;
+                            max-height: 152px !important;
+
+                            .content {
+
+                                .title {
+                                    font-size: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wideScrContent {
+                    display: none;
+                }
+            }
+        }
+
+        .statistics {
+            height: auto;
+            padding: 60px 5vw;
+            overflow: hidden;
+
+            .statsWrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .stat {
+                    margin: 20px 0;
+
+                    .image {
+                        margin-bottom: 12px;
+                        width: 110px;
+                        height: auto;
+                    }
+
+                    .description {
+                        width: 80%;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .offersSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 70px 5vw;
+            overflow: hidden;
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .titleBox {
+
+                    .title {
+                        font-size: 30px;
+                    }
+                }
+
+                .offersWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .layoutWrapper {
+                        margin-top: 50px;
+                        margin-bottom: 20px;
+                        max-width: 425px !important;
+                        min-width: 425px;
+                        padding: 30px 30px;
+
+                        .number {
+                            font-size: 80px;
+                        }
+                    }
+
+                    .additionalsWrapper {
+                        margin-top: 20px;
+                        max-width: 400px;
+
+                        .descr {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .whiteSection {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 30px;
+            }
+
+            .image {
+                width: 335px;
+            }
+        }
+
+        .appSection {
+            height: 750px;
+            background-position: 82% 0%;
+
+            .fullScreenGradience {
+                height: 750px;
+                width: 100%;
+            }
+
+            .textWrapper {
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+
+                .title {
+                    font-size: 30px;
+                    @include triangle(-80px, 0);
+                    margin-bottom: 70px;
+                }
+
+                .imageWrapper {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        .advantages {
+            padding: 65px 5vw 70px 5vw;
+
+            .title {
+                font-size: 34px;
+                margin-bottom: 50px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                min-width: 100%;
+                margin-bottom: 20px;
+
+                .box {
+                    margin-bottom: 40px;
+
+                    .image {
+                        margin-bottom: 15px;
+                    }
+
+                    .description {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+
+        .product {
+            padding: 70px 0 70px 5vw;
+
+            .topWrapper {
+                margin-bottom: 30px;
+
+                .titleContainer {
+
+                    .title {
+                        font-size: 40px;
+
+                        .plus {
+                            margin: 6px 0 0 7px;
+                            font-size: 34px;
+                        }
+                    }
+                }
+
+                .buttonContainer {
+
+                    .sectionCTA {
+                        padding: 3px 7px;
+                    }
+                }
+            }
+
+            .sliderContainer {
+                margin-bottom: 35px;
+
+                .cardWrapper {
+                    min-width: 420px;
+
+                    .imageWrapper {
+
+                        .image {
+                            margin-right: 10px;
+                            width: 115px;
+                            height: 115px;
+                        }
+                    }
+
+                    .elementsWrapper {
+
+                        .title {
+                            font-size: 22px;
+                        }
+
+                        .price {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .partners {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 50px;
+            }
+
+            .allLogos {
+                width: 100%;
+
+                .partner {
+                    margin-bottom: 35px;
+
+                    .image {
+                        width: 90px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .testimonials {
+            position: relative;
+            padding: 70px 5vw;
+            background-position: 28% 0%;
+
+            .contentWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .sliderContainer {
+
+                    .leftWrapper {
+                        margin-bottom: 10px;
+                        max-height: 135px;
+
+                        .slider {
+
+                            .content {
+                                font-size: 40px;
+                                line-height: 38px;
+                            }
+
+                            .title {
+                                
+                            }
+                        }
+                    }
+                }
+
+                .rightSlider {
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+
+                    .rightWrapper {
+                        max-height: 200px;
+                        max-width: 200px;
+                        margin-left: 50px;
+
+                        .slider {
+
+                            .statement {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 415px) {
+    .home {
+
+        .header {
+            height: 750px;
+            background-position: 74% 0%;
+
+            .gradientLayer {
+                height: 400px;
+                width: 100%;
+            }
+
+            .contentWrapper {
+                height: 60%;
+
+                .heading {
+
+                    .sliderBox {
+
+                        .overflowWrapper {
+                            width: auto;
+                            max-height: 152px !important;
+
+                            .content {
+
+                                .title {
+                                    font-size: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wideScrContent {
+                    display: none;
+                }
+            }
+        }
+
+        .statistics {
+            height: auto;
+            padding: 60px 5vw;
+            overflow: hidden;
+
+            .statsWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                margin-bottom: 40px;
+
+                .stat {
+                    margin: 20px 0;
+
+                    .image {
+                        margin-bottom: 12px;
+                    }
+
+                    .description {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+
+        .offersSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 70px 5vw;
+            overflow: hidden;
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .titleBox {
+
+                    .title {
+                        font-size: 30px;
+                    }
+                }
+
+                .offersWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .layoutWrapper {
+                        margin-top: 50px;
+                        margin-bottom: 20px;
+                        max-width: 350px !important;
+                        min-width: 350px;
+                        padding: 30px 20px;
+
+                        .number {
+                            font-size: 80px;
+                        }
+                    }
+
+                    .additionalsWrapper {
+                        margin-top: 20px;
+
+                        .descr {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .whiteSection {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 30px;
+            }
+
+            .image {
+                width: 335px;
+            }
+        }
+
+        .appSection {
+            height: 750px;
+            background-position: 82% 0%;
+
+            .fullScreenGradience {
+                height: 750px;
+                width: 100%;
+            }
+
+            .textWrapper {
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+
+                .title {
+                    font-size: 30px;
+                    @include triangle(-80px, 0);
+                    margin-bottom: 70px;
+                }
+
+                .imageWrapper {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        .advantages {
+            padding: 65px 5vw 70px 5vw;
+
+            .title {
+                font-size: 38px;
+                margin-bottom: 50px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                min-width: 100%;
+                margin-bottom: 20px;
+
+                .box {
+                    margin-bottom: 40px;
+
+                    .image {
+                        margin-bottom: 15px;
+                    }
+
+                    .description {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+
+        .product {
+            padding: 70px 0 70px 5vw;
+
+            .topWrapper {
+                margin-bottom: 30px;
+
+                .titleContainer {
+
+                    .title {
+                        font-size: 40px;
+
+                        .plus {
+                            margin: 6px 0 0 7px;
+                            font-size: 34px;
+                        }
+                    }
+                }
+
+                .buttonContainer {
+
+                    .sectionCTA {
+                        padding: 3px 7px;
+                    }
+                }
+            }
+
+            .sliderContainer {
+                margin-bottom: 35px;
+
+                .cardWrapper {
+                    min-width: 420px;
+
+                    .imageWrapper {
+
+                        .image {
+                            margin-right: 10px;
+                            width: 115px;
+                            height: 115px;
+                        }
+                    }
+
+                    .elementsWrapper {
+
+                        .title {
+                            font-size: 22px;
+                        }
+
+                        .price {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .partners {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 50px;
+            }
+
+            .allLogos {
+                width: 100%;
+
+                .partner {
+                    margin-bottom: 35px;
+
+                    .image {
+                        width: 70px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .testimonials {
+            position: relative;
+            padding: 70px 5vw;
+            background-position: 28% 0%;
+
+            .contentWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .sliderContainer {
+
+                    .leftWrapper {
+                        margin-bottom: 10px;
+                        max-height: 135px;
+
+                        .slider {
+
+                            .content {
+                                font-size: 40px;
+                                line-height: 38px;
+                            }
+
+                            .title {
+                                
+                            }
+                        }
+                    }
+                }
+
+                .rightSlider {
+                    position: absolute;
+                    top: 70px;
+                    right: 12vw;
+
+                    .rightWrapper {
+                        max-height: 200px;
+                        max-width: 150px;
+
+                        .slider {
+
+                            .statement {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 376px) {
+    .home {
+
+        .header {
+            height: 750px;
+            background-position: 74% 0%;
+
+            .gradientLayer {
+                height: 400px;
+                width: 100%;
+            }
+
+            .contentWrapper {
+
+                .heading {
+
+                    .sliderBox {
+
+                        .overflowWrapper {
+                            width: auto;
+                            max-height: 195px !important;
+
+                            .content {
+
+                                .title {
+                                    font-size: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .wideScrContent {
+                    display: none;
+                }
+            }
+        }
+
+        .statistics {
+            height: auto;
+            padding: 60px 5vw;
+            overflow: hidden;
+
+            .statsWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                margin-bottom: 40px;
+
+                .stat {
+                    margin: 20px 0;
+
+                    .image {
+                        margin-bottom: 12px;
+                    }
+
+                    .description {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+
+        .offersSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 70px 5vw;
+            overflow: hidden;
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .titleBox {
+
+                    .title {
+                        font-size: 30px;
+                    }
+                }
+
+                .offersWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .layoutWrapper {
+                        margin-top: 50px;
+                        margin-bottom: 20px;
+                        max-width: 350px !important;
+                        min-width: 350px;
+                        padding: 30px 20px;
+
+                        .number {
+                            font-size: 80px;
+                        }
+                    }
+
+                    .additionalsWrapper {
+                        margin-top: 20px;
+
+                        .descr {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .whiteSection {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 30px;
+            }
+
+            .image {
+                width: 335px;
+            }
+        }
+
+        .appSection {
+            height: 750px;
+            background-position: 82% 0%;
+
+            .fullScreenGradience {
+                height: 750px;
+                width: 100%;
+            }
+
+            .textWrapper {
+                height: 60%;
+
+                .title {
+                    font-size: 30px;
+                    @include triangle(-80px, 0);
+                }
+            }
+        }
+
+        .advantages {
+            padding: 65px 5vw 70px 5vw;
+
+            .title {
+                font-size: 38px;
+                margin-bottom: 50px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                min-width: 100%;
+                margin-bottom: 20px;
+
+                .box {
+                    margin-bottom: 40px;
+
+                    .image {
+                        margin-bottom: 15px;
+                    }
+
+                    .description {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+
+        .product {
+            padding: 70px 0 70px 5vw;
+
+            .topWrapper {
+                margin-bottom: 30px;
+
+                .titleContainer {
+
+                    .title {
+                        font-size: 40px;
+
+                        .plus {
+                            margin: 6px 0 0 7px;
+                            font-size: 34px;
+                        }
+                    }
+                }
+
+                .buttonContainer {
+
+                    .sectionCTA {
+                        padding: 3px 7px;
+                    }
+                }
+            }
+
+            .sliderContainer {
+                margin-bottom: 35px;
+
+                .cardWrapper {
+                    min-width: 420px;
+
+                    .imageWrapper {
+
+                        .image {
+                            margin-right: 10px;
+                            width: 115px;
+                            height: 115px;
+                        }
+                    }
+
+                    .elementsWrapper {
+
+                        .title {
+                            font-size: 22px;
+                        }
+
+                        .price {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .partners {
+            padding: 70px 5vw;
+
+            .title {
+                margin-bottom: 50px;
+            }
+
+            .allLogos {
+                width: 100%;
+
+                .partner {
+                    margin-bottom: 35px;
+
+                    .image {
+                        width: 70px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .testimonials {
+            padding: 70px 5vw;
+            background-position: 28% 0%;
+
+            .contentWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .sliderContainer {
+
+                    .leftWrapper {
+                        margin-bottom: 10px;
+                        max-height: 135px;
+
+                        .slider {
+
+                            .content {
+                                font-size: 40px;
+                                line-height: 38px;
+                            }
+                        }
+                    }
+                }
+
+                .rightSlider {
+                    display: none;
+                }
+            }
+        }
+    }
+}

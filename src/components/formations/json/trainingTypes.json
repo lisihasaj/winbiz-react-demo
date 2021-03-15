@@ -1,0 +1,335 @@
+[
+    {
+        "id": 1,
+        "item": "entrepreneur",
+        "name": "Formations entrepreneurs",
+        "group": [
+            {
+                "id": 1,
+                "cover": "/winbiz/assets/coverTraining1.webp",
+                "title": "comptabilité",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 2,
+                "cover": "/winbiz/assets/coverTraining2.webp",
+                "title": "ventes",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 3,
+                "cover": "/winbiz/assets/coverTraining3.webp",
+                "title": "achats",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 4,
+                "cover": "/winbiz/assets/coverTraining4.webp",
+                "title": "stock",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 5,
+                "cover": "/winbiz/assets/coverTraining5.webp",
+                "title": "swissdec",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 6,
+                "cover": "/winbiz/assets/coverTraining6.webp",
+                "title": "salaires",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 7,
+                "cover": "/winbiz/assets/coverTraining7.webp",
+                "title": "projets",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "item": "fiduciary",
+        "name": "formations fiduciaires",
+        "group": [
+            {
+                "id": 1,
+                "cover": "/winbiz/assets/coverTraining7.webp",
+                "title": "projets",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 2,
+                "cover": "/winbiz/assets/coverTraining6.webp",
+                "title": "swissdec",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 3,
+                "cover": "/winbiz/assets/coverTraining3.webp",
+                "title": "stock",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 4,
+                "cover": "/winbiz/assets/coverTraining1.webp",
+                "title": "ventes",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "item": "specialist",
+        "name": "winbiz specialist",
+        "group": [
+            {
+                "id": 1,
+                "cover": "/winbiz/assets/coverTraining8.webp",
+                "title": "cours Winbiz Specialist",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            },
+            {
+                "id": 2,
+                "cover": "/winbiz/assets/coverTraining9.webp",
+                "title": "Certification winbiz specialist",
+                "text1": "Ce cours est dédié à tous les employés et entrepreneurs qui veulent utiliser Winbiz Comptabilité de manière optimale. Il est également parfaitement adapté à tous ceux qui souhaitent approfondir leurs connaissances sur le fonctionnement de ce module. Nous recommandons d’avoir des notions comptables et également quelques bases en informatique.",
+                "text2": "La situation actuelle nécessite des adaptations de nous tous. La protection et la santé de nos clients sont primordiales pour nous, c’est pourquoi les cours collectifs sont annulés à cause du COVID-19. Ils reprendront dès que la situation sanitaire le permettra.",
+                "text3": "Nous proposons, pendant cette période particulière, des cours personnalisés à distance. Vous pouvez vous inscrire en suivant le cheminement habituel. Le contenu et le prix seront ajustés à vos besoins précis.",
+                "text4": "CHF 180.-/heure HT",
+                "title1": "Comment s’inscrire?",
+                "title2": "Contenu du cours",
+                "title3": "Prix",
+                "list": [
+                    "Création d’un dossier comptable",
+                    "Gestion du plan comptable",
+                    "Saisie d’écritures simples et multiples",
+                    "Gestion des monnaies étrangères",
+                    "Gestion de la TVA",
+                    "Paramétrage des comptes qui touchent la TVA",
+                    "Impression du décompte TVA",
+                    "Impressions du bilan, du compte du résultat, des extraits de comptes, etc.",
+                    "Bouclement de l’exercice comptable",
+                    "Comptabilité analytique"
+                ]
+            }
+        ]
+    }
+]

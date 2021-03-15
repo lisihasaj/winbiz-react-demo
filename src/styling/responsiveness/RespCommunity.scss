@@ -1,0 +1,1361 @@
+// Presets
+
+$ctaColor: #0000df;
+$primaryWhite: #f6f8ff;
+$white: #ffffff;
+$primaryBlack: #000000;
+$textOnPrimary: #6e6e6e;
+$footerText: #b1b2b5;
+$placeholderText: #707070;
+
+$hoverButton: #b8b8b8;
+
+$pageMargin: 0 5vw;
+
+//Font Presents & Mixins
+
+@mixin boldFont {
+  font-family: "CamptonBold";
+}
+
+@mixin semiBoldFont {
+  font-family: "CamptonSemiBold";
+}
+
+@mixin mediumFont {
+  font-family: "CamptonMedium";
+}
+
+@mixin bookFont {
+  font-family: "CamptonBook";
+}
+
+//Button Mixins
+
+@mixin navButtonLayout {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+}
+
+@mixin buttonText {
+  text-transform: uppercase;
+  @include semiBoldFont;
+  font-size: 15px;
+}
+
+@mixin callToAction {
+  border: none;
+  padding: 8px 25px;
+  border-radius: 30px;
+  outline: none;
+  background-color: $ctaColor;
+  color: #ffffff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: lighten($ctaColor, 10%);
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+@mixin hoverTransition {
+  transition: all 0.3s ease;
+}
+
+//Arrow Mixin
+
+@mixin arrowButton($color: #6e6e6e) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  height: auto !important;
+  background: transparent;
+}
+
+//Triangle Mixin
+
+@mixin triangle($top: 0, $left: 0) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    background: transparent;
+    border-style: solid;
+    border-color: $ctaColor;
+    border-width: 18px 15px;
+    border-color: $ctaColor transparent transparent $ctaColor;
+  }
+}
+
+//SubPage NavLink Mixin
+
+@mixin navLink($color: #000000) {
+  @include mediumFont;
+  position: relative;
+  width: auto;
+  height: 45px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: $color;
+  margin-right: 5vw;
+  text-transform: uppercase;
+  text-align: start;
+  font-size: 18px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 4px;
+    width: 100px;
+    background-color: $ctaColor;
+    transition: all 0.3s ease;
+  }
+
+  &:focus,
+  &:hover {
+    color: $ctaColor;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+//Styling
+
+
+@media (max-width: 1025px) {
+    .community {
+        overflow: hidden;
+
+        .header {
+            display: flex;
+            padding: $pageMargin;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $primaryBlack;
+            height: 725px;
+
+            .titleWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .title {
+                    @include boldFont;
+                    color: white;
+                    text-align: center;
+                    font-size: 55px;
+                    margin-bottom: 15px;
+                }
+
+                .description {
+                    @include mediumFont;
+                    color: white;
+                    text-align: center;
+                }
+            }
+
+            .inputWrapper {
+                .inputContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .label {
+                        @include bookFont;
+                        color: white;
+                    }
+
+                    .inputBox {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: $placeholderText;
+                        border-radius: 18px;
+                        width: 570px;
+                        height: 46px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 48px;
+                            height: 30px;
+                            width: 1px;
+                            background: #d6d6d6;
+                        }
+
+                        .searchIcon {
+                            color: #d6d6d6;
+                            font-size: 40px;
+                            padding-left: 15px;
+                        }
+
+                        .searchInput {
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            width: 510px;
+                        }
+
+                        ::placeholder {
+                            color: #d6d6d6 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mediaSection {
+            padding: 70px 0 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .sliderContainer {
+                height: auto;
+                width: 100%;
+                margin: 0;
+
+                .cardWrapper {
+                    width: 330px;
+                    height: 500px;
+
+                    .gradientLayer {
+                        width: 100%;
+                        height: 502px;
+                    }
+
+                    .image {
+
+                    }
+
+                    .textWrapper {
+                        margin-bottom: 40px;
+
+                        .cardTitle {
+
+                        }
+                    }
+                }
+            }
+
+            .pagination {
+
+                .arrowLeft {
+
+                }
+
+                .pages {
+
+                    .page {
+
+                    }
+
+                    .pageActive {
+
+                    }
+                }
+
+                .arrowRight {
+
+                }
+            }
+        }
+
+        .trainings {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .trainingsNav {
+
+                .navLink {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+
+                .active {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+            }
+
+            #line {
+
+            }
+
+            .trainingGroupContainer {
+                margin-top: 10px;
+
+                .imageContainer {
+
+                    .route {
+
+                        .imageWrapper {
+                            height: 100px;
+                            width: 200px;
+                            overflow: hidden !important;
+                            touch-action: none;
+                            -ms-touch-action: none;
+
+                            .trainingTitle {
+                                position: absolute;
+                                left: 10px;
+                                bottom: 7px;
+                            }
+
+                            .gradientLayer {
+
+                            }
+
+                            .trainingImage {
+                                width: 210px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .videosSection {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .filtersContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 50px;
+
+                .sorterBox {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    margin-top: 20px;
+
+                    .label {
+                        color: #000000;
+                        @include bookFont;
+                        text-align: start;
+                        margin-bottom: 5px;
+                    }
+
+                    .sorterWrapper {
+                        background-color: #eaeaea;
+                        border-radius: 10px;
+                        padding: 6px 5px;
+                        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+                    }
+
+                    .sorter {
+                        @include bookFont;
+                        color: $placeholderText;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        padding: 0 20px 0 5px;
+                        @include hoverTransition;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 0;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+
+                    &:hover {
+                        .sorter {
+                            color: $ctaColor;
+                        }
+                    }
+                }
+
+                .searchBox {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    margin: 0;
+
+                    .inputBox {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: #eaeaea;
+                        border-radius: 10px;
+                        width: 280px;
+                        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 43px;
+                            height: 20px;
+                            width: 1px;
+                            background: $placeholderText;
+                        }
+
+                        .searchIcon {
+                            color: $placeholderText;
+                            font-size: 35px;
+                            padding-left: 15px;
+                        }
+
+                        .searchInput {
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            width: 230px;
+                            padding: 3px 0;
+                        }
+                    }
+                }
+            }
+
+            .cardsContainer {
+
+                .cardWrapper {
+                    margin-bottom: 42px;
+
+                    .imageWrapper {
+
+                        .image {
+                            height: 340px;
+                        }
+                    }
+                }
+            }
+
+            .loadMoreBox {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 769px) {
+    .community {
+        overflow: hidden;
+
+        .header {
+            height: 750px;
+            width: 100%;
+
+            .titleWrapper {
+                max-height: 450px;
+                margin-top: 0;
+                margin-bottom: 5vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    margin-bottom: 25px;
+                }
+
+                .description {
+                    font-size: 18px;
+                }
+            }
+
+            .inputWrapper {
+                .inputContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .label {
+                        @include bookFont;
+                        color: white;
+                    }
+
+                    .inputBox {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: $placeholderText;
+                        border-radius: 18px;
+                        width: 570px;
+                        height: 46px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 48px;
+                            height: 30px;
+                            width: 1px;
+                            background: #d6d6d6;
+                        }
+
+                        .searchIcon {
+                            color: #d6d6d6;
+                            font-size: 40px;
+                            padding-left: 15px;
+                        }
+
+                        .searchInput {
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            width: 510px;
+                        }
+
+                        ::placeholder {
+                            color: #d6d6d6 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mediaSection {
+            padding: 70px 0 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .sliderContainer {
+                height: auto;
+                width: 100%;
+                margin: 0;
+
+                .cardWrapper {
+                    width: 330px;
+                    height: 500px;
+
+                    .gradientLayer {
+                        width: 100%;
+                        height: 502px;
+                    }
+
+                    .image {
+
+                    }
+
+                    .textWrapper {
+                        margin-bottom: 40px;
+
+                        .cardTitle {
+
+                        }
+                    }
+                }
+            }
+
+            .pagination {
+
+                .arrowLeft {
+
+                }
+
+                .pages {
+
+                    .page {
+
+                    }
+
+                    .pageActive {
+
+                    }
+                }
+
+                .arrowRight {
+
+                }
+            }
+        }
+
+        .trainings {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .trainingsNav {
+
+                .navLink {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+
+                .active {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+            }
+
+            #line {
+
+            }
+
+            .trainingGroupContainer {
+                margin-top: 10px;
+
+                .imageContainer {
+
+                    .route {
+
+                        .imageWrapper {
+                            height: 100px;
+                            width: 200px;
+                            overflow: hidden !important;
+                            touch-action: none;
+                            -ms-touch-action: none;
+
+                            .trainingTitle {
+                                position: absolute;
+                                left: 10px;
+                                bottom: 7px;
+                            }
+
+                            .gradientLayer {
+
+                            }
+
+                            .trainingImage {
+                                width: 210px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .videosSection {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .filtersContainer {
+                margin-bottom: 40px;
+
+                .sorterBox {
+
+                    .label {
+
+                    }
+
+                    .sorterWrapper {
+                        width: 170px;
+                        padding: 6px 3px;
+
+                        .sorter {
+                            width: 160px;
+                            padding: 0;
+                            -webkit-line-clamp: 0;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+                    }
+                }
+
+                .searchBox {
+
+                    .inputBox {
+                        width: 170px;
+                        padding: 3px 3px;
+
+                        &::after {
+                            position: absolute;
+                            left: 38px;
+                        }
+
+                        .searchIcon {
+                            font-size: 30px;
+                            padding-left: 10px;
+                        }
+
+                        .searchInput {
+                            width: 125px;
+                        }
+                    }
+                }
+            }
+
+            .cardsContainer {
+
+                .cardWrapper {
+                    margin-bottom: 42px;
+
+                    .imageWrapper {
+
+                        .image {
+                            height: 340px;
+                        }
+                    }
+                }
+            }
+
+            .loadMoreBox {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 541px) {
+    .community {
+        overflow: hidden;
+
+        .header {
+            height: 750px;
+            width: 100%;
+
+            .titleWrapper {
+                max-height: 450px;
+                margin-top: 40px;
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    margin-bottom: 25px;
+                }
+
+                .description {
+                    font-size: 18px;
+                }
+            }
+
+            .inputWrapper {
+
+                .inputContainer {
+
+                    .label {
+                        text-align: center;
+                    }
+
+                    .inputBox {
+                        width: 300px;
+
+                        .searchIcon {
+
+                        }
+
+                        .searchInput {
+                            width: 242px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mediaSection {
+            padding: 70px 0 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .sliderContainer {
+                height: auto;
+                width: 100%;
+                margin: 0;
+
+                .cardWrapper {
+                    width: 330px;
+                    height: 500px;
+
+                    .gradientLayer {
+                        width: 100%;
+                        height: 502px;
+                    }
+
+                    .image {
+
+                    }
+
+                    .textWrapper {
+                        margin-bottom: 40px;
+
+                        .cardTitle {
+
+                        }
+                    }
+                }
+            }
+
+            .pagination {
+
+                .arrowLeft {
+
+                }
+
+                .pages {
+
+                    .page {
+
+                    }
+
+                    .pageActive {
+
+                    }
+                }
+
+                .arrowRight {
+
+                }
+            }
+        }
+
+        .trainings {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .trainingsNav {
+
+                .navLink {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+
+                .active {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+            }
+
+            #line {
+
+            }
+
+            .trainingGroupContainer {
+                margin-top: 10px;
+
+                .imageContainer {
+
+                    .route {
+
+                        .imageWrapper {
+                            height: 100px;
+                            width: 200px;
+                            overflow: hidden !important;
+                            touch-action: none;
+                            -ms-touch-action: none;
+
+                            .trainingTitle {
+                                position: absolute;
+                                left: 10px;
+                                bottom: 7px;
+                            }
+
+                            .gradientLayer {
+
+                            }
+
+                            .trainingImage {
+                                width: 210px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .videosSection {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .filtersContainer {
+                margin-bottom: 40px;
+
+                .sorterBox {
+
+                    .sorterWrapper {
+                        width: 170px;
+                        padding: 6px 3px;
+
+                        .sorter {
+                            width: 160px;
+                            padding: 0;
+                            -webkit-line-clamp: 0;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+                    }
+                }
+
+                .searchBox {
+
+                    .inputBox {
+                        width: 170px;
+                        padding: 3px 3px;
+
+                        &::after {
+                            position: absolute;
+                            left: 38px;
+                        }
+
+                        .searchIcon {
+                            font-size: 30px;
+                            padding-left: 10px;
+                        }
+
+                        .searchInput {
+                            width: 125px;
+                        }
+                    }
+                }
+            }
+
+            .cardsContainer {
+
+                .cardWrapper {
+                    margin-bottom: 42px;
+
+                    .imageWrapper {
+
+                        .image {
+                            height: 340px;
+                        }
+                    }
+                }
+            }
+
+            .loadMoreBox {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 416px) {
+    .community {
+        overflow: hidden;
+
+        .header {
+            height: 750px;
+            width: 100%;
+
+            .titleWrapper {
+                max-height: 450px;
+                margin-top: 40px;
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    margin-bottom: 25px;
+                }
+
+                .description {
+                    font-size: 18px;
+                }
+            }
+
+            .inputWrapper {
+
+                .inputContainer {
+
+                    .label {
+                        text-align: center;
+                    }
+
+                    .inputBox {
+                        width: 300px;
+
+                        .searchInput {
+                            width: 242px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mediaSection {
+            padding: 70px 0 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .sliderContainer {
+                height: auto;
+                width: 100%;
+                margin: 0;
+
+                .cardWrapper {
+                    width: 330px;
+                    height: 500px;
+
+                    .gradientLayer {
+                        width: 100%;
+                        height: 502px;
+                    }
+
+                    .textWrapper {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+
+        .trainings {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .trainingsNav {
+
+                .navLink {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+
+                .active {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+            }
+
+            .trainingGroupContainer {
+                margin-top: 10px;
+
+                .imageContainer {
+
+                    .route {
+
+                        .imageWrapper {
+                            height: 100px;
+                            width: 200px;
+                            overflow: hidden !important;
+                            touch-action: none;
+                            -ms-touch-action: none;
+
+                            .trainingTitle {
+                                position: absolute;
+                                left: 10px;
+                                bottom: 7px;
+                            }
+
+                            .trainingImage {
+                                width: 210px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .videosSection {
+            padding: 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .filtersContainer {
+                margin-bottom: 40px;
+
+                .sorterBox {
+
+                    .label {
+
+                    }
+
+                    .sorterWrapper {
+                        width: 170px;
+                        padding: 6px 3px;
+
+                        .sorter {
+                            width: 160px;
+                            padding: 0;
+                            -webkit-line-clamp: 0;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+                    }
+                }
+
+                .searchBox {
+
+                    .inputBox {
+                        width: 170px;
+                        padding: 3px 3px;
+
+                        &::after {
+                            position: absolute;
+                            left: 38px;
+                        }
+
+                        .searchIcon {
+                            font-size: 30px;
+                            padding-left: 10px;
+                        }
+
+                        .searchInput {
+                            width: 125px;
+                        }
+                    }
+                }
+            }
+
+            .cardsContainer {
+
+                .cardWrapper {
+                    margin-bottom: 42px;
+                }
+            }
+
+            .loadMoreBox {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 376px) {
+    .community {
+        overflow: hidden;
+
+        .header {
+            height: 750px;
+            width: 100%;
+
+            .titleWrapper {
+                max-height: 450px;
+                margin-top: 40px;
+
+                .title {
+                    font-size: 40px;
+                    line-height: 35px;
+                    margin-bottom: 25px;
+                }
+
+                .description {
+                    font-size: 18px;
+                }
+            }
+
+            .inputWrapper {
+
+                .inputContainer {
+
+                    .label {
+                        text-align: center;
+                    }
+
+                    .inputBox {
+                        width: 300px;
+
+                        .searchIcon {
+
+                        }
+
+                        .searchInput {
+                            width: 242px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mediaSection {
+            padding: 70px 0 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .sliderContainer {
+                height: auto;
+                width: 100%;
+                margin: 0;
+
+                .cardWrapper {
+                    width: 330px;
+                    height: 500px;
+
+                    .gradientLayer {
+                        width: 100%;
+                        height: 502px;
+                    }
+
+                    .textWrapper {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+
+        .trainings {
+            padding: 70px 5vw 40px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .trainingsNav {
+
+                .navLink {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+
+                .active {
+                    margin: 0 1vw;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+            }
+
+            .trainingGroupContainer {
+                margin-top: 10px;
+
+                .imageContainer {
+
+                    .route {
+
+                        .imageWrapper {
+                            height: 90px;
+
+                            .trainingTitle {
+                                position: absolute;
+                                left: 10px;
+                                bottom: 7px;
+                            }
+
+                            .trainingImage {
+                                width: 150px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .videosSection {
+            padding: 40px 5vw 70px 5vw;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .filtersContainer {
+                margin-bottom: 40px;
+
+                .sorterBox {
+
+                    .sorterWrapper {
+                        width: 160px;
+                        padding: 6px 3px;
+
+                        .sorter {
+                            width: 150px;
+                            padding: 0;
+                            -webkit-line-clamp: 0;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+                    }
+                }
+
+                .searchBox {
+
+                    .inputBox {
+                        width: 160px;
+                        padding: 3px 3px;
+
+                        &::after {
+                            position: absolute;
+                            left: 36px;
+                        }
+
+                        .searchIcon {
+                            font-size: 30px;
+                            padding-left: 10px;
+                        }
+
+                        .searchInput {
+                            width: 117px;
+                        }
+                    }
+                }
+            }
+
+            .cardsContainer {
+
+                .cardWrapper {
+                    margin-bottom: 42px;
+                }
+            }
+
+            .loadMoreBox {
+                margin-top: 30px;
+            }
+        }
+    }
+}

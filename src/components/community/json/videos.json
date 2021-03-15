@@ -1,0 +1,272 @@
+[
+    {
+        "id": 0,
+        "image": "/winbiz/assets/video1.webp",
+        "duration": "00:12:45",
+        "date": "2021-09-04",
+        "title": "Enregistrer mon premier collaborateur avec Winbiz",
+        "more": [
+            "Webinar",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 1,
+        "image": "/winbiz/assets/video2.webp",
+        "duration": "00:05:45",
+        "date": "2021-06-12",
+        "title": "Ma première transmission d’informations salariales via Swissdec",
+        "more": [
+            "Formation",
+            "Salaires"
+        ]
+    },
+    {
+        "id": 2,
+        "image": "/winbiz/assets/video3.webp",
+        "duration": "00:23:45",
+        "date": "2021-09-04",
+        "title": "Comment accéder aux mises en page des factures Winbiz",
+        "more": [
+            "Webinar",
+            "Facturation"
+        ]
+    },
+    {
+        "id": 3,
+        "image": "/winbiz/assets/video4.webp",
+        "duration": "00:48:45",
+        "date": "2021-03-28",
+        "title": "Comment migrer mes clients vers Winbiz Cloud en tant que fiduciaire?",
+        "more": [
+            "Fiduciaire",
+            "Formation",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 4,
+        "image": "/winbiz/assets/video5.webp",
+        "duration": "00:23:45",
+        "date": "2021-02-17",
+        "title": "Comment accéder aux mises en page des factures Winbiz",
+        "more": [
+            "Webinar",
+            "Facturation"
+        ]
+    },
+    {
+        "id": 5,
+        "image": "/winbiz/assets/video6.webp",
+        "duration": "00:12:45",
+        "date": "2021-09-04",
+        "title": "Enregistrer mon premier collaborateur avec Winbiz",
+        "more": [
+            "Webinar",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 6,
+        "image": "/winbiz/assets/video7.webp",
+        "duration": "00:48:45",
+        "date": "2021-03-28",
+        "title": "Comment migrer mes clients vers Winbiz Cloud en tant que fiduciaire?",
+        "more": [
+            "Fiduciaire",
+            "Formation",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 7,
+        "image": "/winbiz/assets/video8.webp",
+        "duration": "00:05:45",
+        "date": "2021-06-12",
+        "title": "Ma première transmission d’informations salariales via Swissdec",
+        "more": [
+            "Formation",
+            "Salaires"
+        ]
+    },
+    {
+        "id": 8,
+        "image": "/winbiz/assets/video9.webp",
+        "duration": "00:48:45",
+        "date": "2021-03-28",
+        "title": "Comment migrer mes clients vers Winbiz Cloud en tant que fiduciaire?",
+        "more": [
+            "Fiduciaire",
+            "Formation",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 9,
+        "image": "/winbiz/assets/video10.webp",
+        "duration": "00:23:45",
+        "date": "2021-02-17",
+        "title": "Comment accéder aux mises en page des factures Winbiz",
+        "more": [
+            "Webinar",
+            "Facturation"
+        ]
+    },
+    {
+        "id": 10,
+        "image": "/winbiz/assets/video11.webp",
+        "duration": "00:05:45",
+        "date": "2020-06-12",
+        "title": "Ma première transmission d’informations salariales via Swissdec",
+        "more": [
+            "Formation",
+            "Salaires"
+        ]
+    },
+    {
+        "id": 11,
+        "image": "/winbiz/assets/video12.webp",
+        "duration": "00:12:45",
+        "date": "2021-09-04",
+        "title": "Enregistrer mon premier collaborateur avec Winbiz",
+        "more": [
+            "Webinar",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 12,
+        "image": "/winbiz/assets/video1.webp",
+        "duration": "00:12:45",
+        "date": "2021-09-04",
+        "title": "Enregistrer mon premier collaborateur avec Winbiz",
+        "more": [
+            "Webinar",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 13,
+        "image": "/winbiz/assets/video2.webp",
+        "duration": "00:05:45",
+        "date": "2021-06-12",
+        "title": "Ma première transmission d’informations salariales via Swissdec",
+        "more": [
+            "Formation",
+            "Salaires"
+        ]
+    },
+    {
+        "id": 14,
+        "image": "/winbiz/assets/video3.webp",
+        "duration": "00:23:45",
+        "date": "2021-09-04",
+        "title": "Comment accéder aux mises en page des factures Winbiz",
+        "more": [
+            "Webinar",
+            "Facturation"
+        ]
+    },
+    {
+        "id": 15,
+        "image": "/winbiz/assets/video4.webp",
+        "duration": "00:48:45",
+        "date": "2021-03-28",
+        "title": "Comment migrer mes clients vers Winbiz Cloud en tant que fiduciaire?",
+        "more": [
+            "Fiduciaire",
+            "Formation",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 16,
+        "image": "/winbiz/assets/video5.webp",
+        "duration": "00:23:45",
+        "date": "2021-02-17",
+        "title": "Comment accéder aux mises en page des factures Winbiz",
+        "more": [
+            "Webinar",
+            "Facturation"
+        ]
+    },
+    {
+        "id": 18,
+        "image": "/winbiz/assets/video6.webp",
+        "duration": "00:12:45",
+        "date": "2021-09-04",
+        "title": "Enregistrer mon premier collaborateur avec Winbiz",
+        "more": [
+            "Webinar",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 19,
+        "image": "/winbiz/assets/video7.webp",
+        "duration": "00:48:45",
+        "date": "2021-03-28",
+        "title": "Comment migrer mes clients vers Winbiz Cloud en tant que fiduciaire?",
+        "more": [
+            "Fiduciaire",
+            "Formation",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 20,
+        "image": "/winbiz/assets/video8.webp",
+        "duration": "00:05:45",
+        "date": "2021-06-12",
+        "title": "Ma première transmission d’informations salariales via Swissdec",
+        "more": [
+            "Formation",
+            "Salaires"
+        ]
+    },
+    {
+        "id": 21,
+        "image": "/winbiz/assets/video9.webp",
+        "duration": "00:48:45",
+        "date": "2021-03-28",
+        "title": "Comment migrer mes clients vers Winbiz Cloud en tant que fiduciaire?",
+        "more": [
+            "Fiduciaire",
+            "Formation",
+            "Comptabilité"
+        ]
+    },
+    {
+        "id": 22,
+        "image": "/winbiz/assets/video10.webp",
+        "duration": "00:23:45",
+        "date": "2021-02-17",
+        "title": "Comment accéder aux mises en page des factures Winbiz",
+        "more": [
+            "Webinar",
+            "Facturation"
+        ]
+    },
+    {
+        "id": 23,
+        "image": "/winbiz/assets/video11.webp",
+        "duration": "00:05:45",
+        "date": "2021-06-12",
+        "title": "Ma première transmission d’informations salariales via Swissdec",
+        "more": [
+            "Formation",
+            "Salaires"
+        ]
+    },
+    {
+        "id": 24,
+        "image": "/winbiz/assets/video12.webp",
+        "duration": "00:12:45",
+        "date": "2021-09-04",
+        "title": "Enregistrer mon premier collaborateur avec Winbiz",
+        "more": [
+            "Webinar",
+            "Comptabilité"
+        ]
+    }
+]

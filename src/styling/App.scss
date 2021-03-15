@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "CamptonBold";
+  src: local("CamptonBold"), url(../fonts/CamptonBold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "CamptonSemiBold";
+  src: local("CamptonSemiBold"),
+    url(../fonts/CamptonSemiBold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "CamptonMedium";
+  src: local("CamptonMedium"),
+    url(../fonts/CamptonMedium.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "CamptonBook";
+  src: local("CamptonBook"), url(../fonts/CamptonBook.otf) format("truetype");
+}
+
+//Everything
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.menu-wrapper--inner {
+  transform: translate3d(0px, 0px, 0px);
+}
+
+//Empty pages
+
+.section {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(73, 73, 73) !important;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-family: "CamptonBold";
+    color: white;
+  }
+}

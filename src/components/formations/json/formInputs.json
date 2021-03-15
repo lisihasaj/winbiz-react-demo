@@ -1,0 +1,96 @@
+{
+    "pdi": [
+        {
+            "id": "clientNumber",
+            "label": "Numéro de client",
+            "htmlFor": "Numéro de client",
+            "placeholder": "numéro de client",
+            "type": "number",
+            "name": "clientNumber",
+            "error": "Le numéro de client doit être rempli"
+        },
+        {
+            "id": "socialReason",
+            "label": "Raison sociale",
+            "htmlFor": "Raison sociale",
+            "placeholder": "raison sociale",
+            "type": "text",
+            "name": "socialReason",
+            "error": "La raison sociale doit être complétée"
+        },
+        {
+            "id": "firstName",
+            "label": "Prénom *",
+            "htmlFor": "Prénom *",
+            "ref": "register",
+            "placeholder": "prénom",
+            "type": "text",
+            "name": "firstName",
+            "error": "Le prénom doit être complété"
+        },
+        {
+            "id": "lastName",
+            "label": "Nom *",
+            "htmlFor": "Nom *",
+            "ref": "register",
+            "placeholder": "nom",
+            "type": "text",
+            "name": "lastName",
+            "error": "Le nom doit être rempli"
+        },
+        {
+            "id": "email",
+            "label": "Adresse mail *",
+            "htmlFor": "Adresse mail *",
+            "ref": "register",
+            "placeholder": "votre adresse mail",
+            "type": "email",
+            "name": "email",
+            "error": "L'email doit être rempli"
+        }
+    ],
+    "phoneNumber": [
+        {
+            "id": "telephone",
+            "label": "Téléphone *",
+            "htmlFor": "Téléphone *",
+            "ref": "register",
+            "name": "telephone",
+            "error": "Le téléfone doit être complété"
+        }
+    ],
+    "addi": [
+        {
+            "id": "address",
+            "label": "Adresse *",
+            "htmlFor": "Adresse *",
+            "ref": "register",
+            "placeholder": "adresse postale",
+            "type": "text",
+            "name": "address",
+            "error": "L'adresse doit être complétée"
+        }
+    ],
+    "twoLast": [
+        {
+            "id": "npa",
+            "label": "NPA *",
+            "htmlFor": "NPA *",
+            "ref": "register",
+            "placeholder": "NPA",
+            "type": "text",
+            "name": "npa",
+            "error": "La NPA doit être complétée"
+        },
+        {
+            "id": "location",
+            "label": "Localité *",
+            "htmlFor": "Localité *",
+            "ref": "register",
+            "placeholder": "Localité",
+            "type": "text",
+            "name": "location",
+            "error": "L'emplacement doit être rempli"
+        }
+    ]
+}

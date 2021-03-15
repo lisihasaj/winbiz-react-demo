@@ -1,0 +1,22 @@
+{
+    "appdata": [
+        {
+            "id": 1,
+            "url": "/winbiz/assets/location.png",
+            "title": "Accessible",
+            "description": "Winbiz Cloud est disponible depuis le bureau, la maison et, à la demande, depuis la fiduciaire."
+        },
+        {
+            "id": 2,
+            "url": "/winbiz/assets/secure.png",
+            "title": "Sécurisé",
+            "description": "Vos données sont stockées en Suisse et sauvegardées plusieurs fois par jour."
+        },
+        {
+            "id": 3,
+            "url": "/winbiz/assets/recycle.png",
+            "title": "Toujours à jour",
+            "description": "Vous travaillez toujours sur la dernière version disponible de Winbiz Cloud."
+        }
+    ]
+}

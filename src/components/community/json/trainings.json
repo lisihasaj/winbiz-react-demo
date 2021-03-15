@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "item": "entrepreneur",
+        "name": "Formations entrepreneurs",
+        "group": [
+            {
+                "id": 1,
+                "image": "/winbiz/assets/traininge1.webp",
+                "title": "comptabilité",
+                "url": "/formations/entrepreneur/comptabilité"
+            },
+            {
+                "id": 2,
+                "image": "/winbiz/assets/traininge2.webp",
+                "title": "ventes",
+                "url": "/formations/entrepreneur/ventes"
+            },
+            {
+                "id": 3,
+                "image": "/winbiz/assets/traininge3.webp",
+                "title": "achats",
+                "url": "/formations/entrepreneur/achats"
+            },
+            {
+                "id": 4,
+                "image": "/winbiz/assets/traininge4.webp",
+                "title": "stock",
+                "url": "/formations/entrepreneur/stock"
+            },
+            {
+                "id": 5,
+                "image": "/winbiz/assets/traininge5.webp",
+                "title": "swissdec",
+                "url": "/formations/entrepreneur/swissdec"
+            },
+            {
+                "id": 6,
+                "image": "/winbiz/assets/traininge6.webp",
+                "title": "salaires",
+                "url": "/formations/entrepreneur/salaires"
+            },
+            {
+                "id": 7,
+                "image": "/winbiz/assets/traininge7.webp",
+                "title": "projets",
+                "url": "/formations/entrepreneur/projets"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "item": "fiduciary",
+        "name": "formations fiduciaires",
+        "group": [
+            {
+                "id": 1,
+                "image": "/winbiz/assets/traininge7.webp",
+                "title": "projets",
+                "url": "/formations/fiduciary/projets"
+            },
+            {
+                "id": 2,
+                "image": "/winbiz/assets/traininge6.webp",
+                "title": "swissdec",
+                "url": "/formations/fiduciary/swissdec"
+            },
+            {
+                "id": 3,
+                "image": "/winbiz/assets/traininge3.webp",
+                "title": "stock",
+                "url": "/formations/fiduciary/stock"
+            },
+            {
+                "id": 4,
+                "image": "/winbiz/assets/traininge1.webp",
+                "title": "ventes",
+                "url": "/formations/fiduciary/ventes"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "item": "specialist",
+        "name": "winbiz specialist",
+        "group": [
+            {
+                "id": 1,
+                "image": "/winbiz/assets/trainingw1.webp",
+                "title": "cours Winbiz Specialist",
+                "url": "/formations/specialist/cours%20Winbiz%20Specialist"
+            },
+            {
+                "id": 2,
+                "image": "/winbiz/assets/trainingw2.webp",
+                "title": "Certification winbiz specialist",
+                "url": "/formations/specialist/Certification%20winbiz%20specialist"
+            }
+        ]
+    }
+]

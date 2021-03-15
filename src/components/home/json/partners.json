@@ -1,0 +1,52 @@
+{
+    "partners": [
+        {
+            "id": 1,
+            "url": "/winbiz/assets/urwerk.png"
+        },
+        {
+            "id": 2,
+            "url": "/winbiz/assets/unil.png"
+        },
+        {
+            "id": 3,
+            "url": "/winbiz/assets/rolex.png"
+        },
+        {
+            "id": 4,
+            "url": "/winbiz/assets/manor.png"
+        },
+        {
+            "id": 5,
+            "url": "/winbiz/assets/migros.png"
+        },
+        {
+            "id": 6,
+            "url": "/winbiz/assets/hug.png"
+        },
+        {
+            "id": 7,
+            "url": "/winbiz/assets/securitas.png"
+        },
+        {
+            "id": 8,
+            "url": "/winbiz/assets/chuv.png"
+        },
+        {
+            "id": 9,
+            "url": "/winbiz/assets/sunrise.png"
+        },
+        {
+            "id": 10,
+            "url": "/winbiz/assets/cartier.png"
+        },
+        {
+            "id": 11,
+            "url": "/winbiz/assets/ecal.png"
+        },
+        {
+            "id": 12,
+            "url": "/winbiz/assets/swatch.png"
+        }
+    ]
+}
